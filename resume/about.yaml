@@ -6,9 +6,8 @@
     available: true
     seeking: Freelance & Contract
   skills:
-    - category:
-        name: Music
-        - skill: Violin
-          years: 12
-        - skill: Cubase
-          years: 2
+    Musical Artist:
+      - skill: Violin
+        years: 12
+      - skill: Cubase
+        years: 2

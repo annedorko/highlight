@@ -1,8 +1,8 @@
 ---
   roles:
     default: Search Engine Marketer
-    front-end-developer: Web Developer
-    graphic-designer: In-House Graphic Designer
+    Front End Developer: Web Developer
+    Graphic Designer: In-House Graphic Designer
   company: Casa Palmera
   location: Del Mar, California, USA
   url: https://casapalmera.com/
@@ -21,7 +21,7 @@
       - Adobe InDesign
       - Adobe Photoshop
       - Graphic Design
-    writer:
+    Writer:
       - Content Writing
   descriptions:
     default: Identified keyword opportunities, created keyword-focused content to generate business inquiries, maintained and optimized the website, designed magazine ads and internal marketing visuals.
