@@ -1,6 +1,6 @@
 # Highlight: a Static Site Generator
 
-Highlight is a lightweight, opinionated Static Site Generator (SSG) for quickly creating a beautiful resume and portfolio site that targets multiple ideal job titles.
+Highlight is a lightweight, opinionated Static Site Generator (SSG) for quickly creating a beautiful resume and portfolio site that targets multiple ideal roles.
 
 **Note:** This project is in progress and is not considered functional until [Version 1.0](https://github.com/annedorko/highlight/milestone/1) has been reached.
 
@@ -30,6 +30,12 @@ node && npm
 3. Generate the site in the console using `python site.py`
 
 Run `python site.py server` and navigate to [http://localhost:4242](http://localhost:4242) to preview your site live.
+
+### Usage
+
+Modify target roles and professional summaries using `resume/roles.yaml`
+
+Modify career history under `resume/history/`
 
 ## Roadmap
 

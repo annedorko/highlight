@@ -6,7 +6,7 @@ import markdown
 from jinja2 import Environment, FileSystemLoader
 
 # Convert contents to Markdown
-with open('content/page.md', 'r') as file:
+with open('pages/page.md', 'r') as file:
     # Meta returns as a Dictionary with lists
     md = markdown.Markdown(extensions=['meta'])
     html = md.convert(file.read())

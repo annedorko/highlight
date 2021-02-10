@@ -1,0 +1,7 @@
+---
+  roles: # Target roles and professional summaries.
+    - role: Front End Developer
+      summary: Unique professional summary for Front End Developer.
+    - role: Content Writer
+      summary: Unique professional summary for Content Writer.
+      slug: writer
