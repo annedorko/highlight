@@ -1,6 +1,14 @@
-# Static Resume Site Generator
+# Highlight: a Static Site Generator
 
-An experiment building a lightweight static site generator with python to build a beautiful resume and portfolio site targeted for different ideal job titles.
+Highlight is a lightweight, opinionated Static Site Generator (SSG) for quickly creating a beautiful resume and portfolio site that targets multiple ideal job titles.
+
+## Who is it for?
+
+Highlight is built by and for generalists, who often need tweaked versions of their resume and portfolio to be appealing for different opportunities. This SSG is built to help you _highlight_ the right parts of your diverse skillset and experiences to the right people, quickly and elegantly.
+
+Because the output is a static site, you can host your resume and portfolio from nearly anywhere. Free static site hosting is available with [GitHub Pages](https://pages.github.com/). View the demo portfolio hosted at [GitHub Pages here](https://annedorko.github.io/showcase/).
+
+**Note:** This project is currently in progress and is not considered functional until [Version 1.0](https://github.com/annedorko/highlight/milestone/1) has been reached.
 
 ## Built With
 
@@ -8,7 +16,7 @@ An experiment building a lightweight static site generator with python to build 
 
 ## Getting Started
 
-Obviously, if you use this project base, you should modify this project to suit your own resume and portfolio activities!
+If you use this project base, modify this project to suit your own resume and portfolio activities!
 
 ### Prerequisites
 
