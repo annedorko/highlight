@@ -1,6 +1,7 @@
 # Tutorial
 # https://blog.naveeraashraf.com/posts/make-static-site-generator-with-python-2/
 import os
+import sys
 import markdown
 from jinja2 import Environment, FileSystemLoader
 
@@ -25,3 +26,7 @@ with open('content/page.md', 'r') as file:
 # Render CSS
 os.system(
     'npx tailwindcss-cli@latest build ./assets/css/styles.css -o site/assets/css/tailwind.css')
+
+# Optionally run localhost server
+if 'server' in sys.argv:
+    os.system('python -m http.server 4242 -d site/')
