@@ -8,7 +8,7 @@ Highlight is a lightweight, opinionated Static Site Generator (SSG) for quickly 
 
 Highlight is built by and for generalists, who often need tweaked versions of their resume and portfolio to be appealing for different opportunities. This SSG is built to help you _highlight_ the right parts of your diverse skillset and experiences to the right people, quickly and elegantly.
 
-Because the output is a static site, you can host your resume and portfolio from nearly anywhere. Free static site hosting is available with [GitHub Pages](https://pages.github.com/). View the demo portfolio hosted at [GitHub Pages here](https://annedorko.github.io/showcase/).
+Because the output is a static site, you can host your resume and portfolio from nearly anywhere. Free static site hosting is available with [GitHub Pages](https://pages.github.com/). View the demo portfolio hosted at [GitHub Pages here](https://hire.annedorko.com).
 
 ## Built With
 
