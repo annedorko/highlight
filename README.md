@@ -57,6 +57,7 @@ This project was to get my own flexible resume and portfolio running as well as 
 
 ### Packages
 - [Python-Markdown](https://github.com/Python-Markdown/markdown)
+- [PyYAML](https://pyyaml.org/wiki/PyYAMLDocumentation)
 
 ### Resources
 - [othneildrew’s Best README Template](https://github.com/othneildrew/Best-README-Template)
