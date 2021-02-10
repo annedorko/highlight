@@ -1,6 +1,5 @@
-title: Hello world
-date: 2021-02-09
+title: About
 
-# Hello, world!
+# About
 
-This is my first post in my custom static site generator.
+This is your bio page!

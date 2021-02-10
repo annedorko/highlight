@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-gray-900 leading-tight">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="./assets/css/tailwind.css" type="css" />
+    <link href="/assets/css/tailwind.css" rel="stylesheet" />
     <title>{{ post.title }}</title>
 </head>
-<body>
-
-    <h1>{{ post.title }}</h1>
-    <small>{{ post.date }}</small>
-    <p>
-        {{ post.content }}
-    </p>
+<body class="min-h-screen bg-gray-100">
+    {{ post.content }}
 </body>
 </html>

@@ -1,0 +1,14 @@
+---
+  name: Anne Dorko
+  taglines:
+    default: I blend data and art to make things that make a difference.
+  open:
+    available: true
+    seeking: Freelance & Contract
+  skills:
+    - category:
+        name: Music
+        - skill: Violin
+          years: 12
+        - skill: Cubase
+          years: 2

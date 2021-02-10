@@ -16,8 +16,7 @@ with open('pages/page.md', 'r') as file:
 
     data = {
         'content': html,
-        'title': md.Meta.get('title')[0],
-        'date': md.Meta.get('date')[0]
+        'title': md.Meta.get('title')[0]
     }
     page = template.render(post=data)
     with open('site/index.html', 'w') as file:
