@@ -24,7 +24,7 @@ with open('pages/page.md', 'r') as file:
 
 # Render CSS
 os.system(
-    'npx tailwindcss-cli@latest build ./assets/css/styles.css -o site/assets/css/tailwind.css')
+    'npx tailwindcss-cli@latest build ./assets/css/styles.css -o site/assets/css/styles.css')
 
 # Optionally run localhost server
 if 'server' in sys.argv:
