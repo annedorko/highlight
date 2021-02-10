@@ -41,7 +41,7 @@ Distributed under the `GNU GPLv3` license. See `LICENSE` for more information.
 
 ## Contact
 
-Anne Dorko - [@annedorko](https://twitter.com/annedorko) - [anne@dorko.tv](mailto:anne@dorko.tv)
+Anne Dorko - [LinkedIn](https://www.linkedin.com/in/annedorko) - [@annedorko](https://twitter.com/annedorko) - [anne@dorko.tv](mailto:anne@dorko.tv)
 
 Project Link: [github.com/annedorko/highlight](https://github.com/annedorko/highlight)
 
