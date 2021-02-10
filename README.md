@@ -29,4 +29,4 @@ node && npm
 2. Install NPM packages.
 3. Generate the site in the console using `python site.py`
 
-Run `python site.py server` and navigate to [localhost:4242](http://localhost:4242) to preview your site live.
+Run `python site.py server` and navigate to [http://localhost:4242](http://localhost:4242) to preview your site live.
