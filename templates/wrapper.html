@@ -8,9 +8,21 @@
     <title>{{ post.title }}</title>
 </head>
 <body class="min-h-screen bg-gray-100">
-    <nav>
-      {{ person.name }}
-    </nav>
-    {{ post.content }}
+  <nav class="grid grid-cols-6 p-2 bg-black text-gray-50">
+    <div class="name">
+      <strong>{{ person.name }}</strong>
+      <img src="{{ person.gravatar }}" />
+    </div>
+    <ul class="col-span-5">
+      <li><a href="">Pages</a></li>
+    </ul>
+  </nav>
+  <div id="main">
+    <div class="page flex justify-center">
+      <div class="prose mt-1">
+        {{ post.content }}
+      </div>
+    </div>
+  </div>
 </body>
 </html>

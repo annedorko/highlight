@@ -2,39 +2,49 @@
 # https://blog.naveeraashraf.com/posts/make-static-site-generator-with-python-2/
 import os
 import sys
-import markdown
-from jinja2 import Environment, FileSystemLoader
-from yaml import load, dump
-try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-except ImportError:
-    from yaml import Loader, Dumper
+from app.load import get_global
+from app.write import RegenerateSite, generate_site
+import time
+import logging
+from watchdog.observers import Observer
+from app.server import run
 
-# Get global site settings
-with open('resume/about.yaml', 'r') as about_file:
-    about = load(about_file, Loader=Loader)
 
-# Convert contents to Markdown
-with open('pages/page.md', 'r') as file:
-    # Meta returns as a Dictionary with lists
-    md = markdown.Markdown(extensions=['meta'])
-    html = md.convert(file.read())
+# Returns site.person, site.settings
+site = get_global()
+# Generate HTML site
+generate_site(site)
 
-    env = Environment(loader=FileSystemLoader('templates'))
-    template = env.get_template('wrapper.html')
+# Compile CSS for production
+if 'compile' in sys.argv:
+    os.system(
+        'npx tailwind build ./assets/css/styles.css -o site/assets/css/styles.css -c tailwind.prod.config.js')
 
-    data = {
-        'content': html,
-        'title': md.Meta.get('title')[0]
-    }
-    page = template.render(post=data, person=about)
-    with open('site/index.html', 'w') as file:
-        file.write(page)
-
-# Render CSS
-os.system(
-    'npx tailwindcss-cli@latest build ./assets/css/styles.css -o site/assets/css/styles.css')
-
-# Optionally run localhost server
+# Run dev server with full Tailwind CSS
 if 'server' in sys.argv:
-    os.system('python -m http.server 4242 -d site/')
+    os.system(
+        'npx tailwind build ./assets/css/styles.css -o site/assets/css/styles.css')
+    run()
+
+# Watch for changes
+if 'watch' in sys.argv:
+    if __name__ == "__main__":
+        logging.basicConfig(level=logging.INFO,
+                            format='%(asctime)s - %(message)s',
+                            datefmt='%Y-%m-%d %H:%M:%S')
+        paths = [
+            'pages',
+            'resume',
+            'templates'
+        ]
+        for path in paths:
+            event_handler = RegenerateSite()
+            observer = Observer()
+            observer.schedule(event_handler, path, recursive=True)
+            observer.start()
+        try:
+            while True:
+                time.sleep(1)
+        finally:
+            observer.stop()
+            observer.join()

@@ -1,13 +1,18 @@
 ---
+  homepage: https://www.annedorko.com
   name: Anne Dorko
   taglines:
     default: I blend data and art to make things that make a difference.
   open:
     available: true
     seeking: Freelance & Contract
+    location: Remote
   skills:
     Musical Artist:
       - skill: Violin
         years: 12
-      - skill: Cubase
+      - skill: Music Production
         years: 2
+  email: anne@dorko.tv
+  phone: +1 512 774 4332
+  timezone: CET
