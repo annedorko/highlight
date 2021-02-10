@@ -61,3 +61,4 @@ This project was to get my own flexible resume and portfolio running as well as 
 ### Resources
 - [othneildrew’s Best README Template](https://github.com/othneildrew/Best-README-Template)
 - [nqcm’s Static Site Generator Tutorial](https://github.com/nqcm/static-site-generator)
+- [Ansible YAML Syntax Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
