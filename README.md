@@ -20,8 +20,13 @@ If you use this project base, modify this project to suit your own resume and po
 
 ### Prerequisites
 
-python
-node && npm
+Built and tested with:
+
+- Python 3
+- Node.js 15+
+- NPM 7+
+
+The program may work on lower versions of Node or NPM.
 
 ### Installation
 
