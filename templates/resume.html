@@ -1,11 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="flex justify-center w-screen p-2 mt-3">
-  <div class="resume grid grid-cols-3 gap-8 w-2/3 max-w-screen-lg">
+  <div class="resume grid grid-cols-3 gap-8 w-2/3 max-w-screen-lg print:w-full">
       <div class="profile">
-        <h2 class="font-bold text-4xl leading-8">{{ person.name }}</h2>
-        <h1 class="font-bold my-2 text-2xl">{{ role.role }}</h1>
-        <p class="p-2 bg-white rounded-md text-sm">{{ person.taglines.default }}</p>
+        <h2 class="font-bold text-4xl leading-8 print:text-3xl">{{ person.name }}</h2>
+        <h1 class="font-bold my-2 text-2xl print:hidden">{{ role.role }}</h1>
         <ul class="my-2">
           {% for contact in person.contact %}
           <li class="pb-1">{{ person.contact[contact] }}</li>
@@ -20,37 +19,37 @@
             </li>
           {% endfor %}
         </ul>
+        <h3 class="mt-4 text-xl font-bold">Education</h3>
+        <ul>
+          {% for edu in person.education %}
+            <li>
+              <h4 class="mt-2 text-lg">{{ edu }} <span class="float-right">{{ person.education[edu].graduation }}</span></h4>
+              <p class="text-sm">
+                {{ person.education[edu].school }}<br />
+                {{ person.education[edu].degree }}, {{ person.education[edu].study }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
         <h3 class="mt-4 text-xl font-bold">Skills</h3>
         <ul>
           {% for category in person.skills %}
             <li>
-              <h4 class="mt-2 text-lg">{{ category }}</h4>
+              <h4 class="mt-2 text-lg print:mt-1 print:font-bold">{{ category }}</h4>
               <ul class="text-sm">
                 {% for skill in person.skills[category] %}
                 <li class="grid grid-cols-4">
                   <span class="col-span-3">{{ skill.skill }}</span>
-                  <span class="text-right">{{ skill.years }} {{ 'year' if skill.years == 1 else 'years' }}</span>
+                  <span class="text-right">{{ skill.years }}y</span>
                 </li>
                 {% endfor %}
               </ul>
             </li>
           {% endfor %}
         </ul>
-        <h3 class="mt-4 text-xl font-bold">Education</h3>
-        <ul>
-          {% for edu in person.education %}
-            <li>
-              <h4 class="mt-2 text-lg">{{ edu }}</h4>
-              <p class="text-sm">
-                {{ person.education[edu].school }}<br />
-                {{ person.education[edu].degree }}, {{ person.education[edu].study }}<br />
-                {{ person.education[edu].graduation }}
-              </p>
-            </li>
-          {% endfor %}
-        </ul>
       </div>
       <div class="resume col-span-2">
+        <h1 class="hidden font-bold my-2 text-2xl print:block">{{ role.role }}</h1>
         <p class="text-2xl text-gray-600 pb-2 mb-2 border-b-2">{{ role.summary }}</p>
       </div>
   </div>

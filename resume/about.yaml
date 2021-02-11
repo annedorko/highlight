@@ -8,28 +8,20 @@
     location: Remote
   skills:
     Musical Artist:
-      - skill: Violin
-        years: 12
-      - skill: Guitar & keyboard
+      - skill: Violin, guitar, keyboard
         years: 15
-      - skill: Chorus & theater
+      - skill: Chorus and theater
         years: 10
       - skill: Songwriting
         years: 7
-      - skill: Jingles & themes
-        years: 1
-      - skill: Music Production
+      - skill: Music production
         years: 2
-      - skill: Mixing & mastering
-        years: 1
     Web & Marketing:
       - skill: Web design
         years: 15
       - skill: Web development
         years: 13
-      - skill: SEO
-        years: 13
-      - skill: Traffic analytics
+      - skill: SEO and traffic analytics
         years: 13
       - skill: Ads management
         years: 12
@@ -46,6 +38,13 @@
         years: 3
       - skill: Live streaming
         years: 3
+    Teaching:
+      - skill: Curriculum development
+        years: 2
+      - skill: College instructor
+        years: 1
+      - skill: Online course design
+        years: 2
   links:
     Homepage:
       url: https://www.annedorko.com
@@ -54,10 +53,6 @@
       url: https://www.linkedin.com/in/annedorko
       text: 'LinkedIn'
       icon: '<i class="fab fa-linkedin"></i>'
-    Twitter:
-      url: https://twitter.com/annedorko
-      text: '@annedorko'
-      icon: '<i class="fab fa-twitter"></i>'
   contact:
     email: anne@dorko.tv
     phone: +1 512 774 4332

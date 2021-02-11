@@ -7,9 +7,28 @@
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>{{ meta.title }}</title>
+    <style type="text/css" media="print">
+    @page
+    {
+        size:  auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+
+    html
+    {
+        background-color: #FFFFFF;
+        margin: 0px;  /* this affects the margin on the html before sending to printer */
+    }
+
+    body
+    {
+        /* border: solid 1px blue ; */
+        margin: 8mm 10mm; /* margin you want for the content */
+    }
+    </style>
 </head>
 <body class="min-h-screen bg-gray-100">
-  <nav class="grid grid-cols-6 p-2 bg-black text-gray-50">
+  <nav class="grid grid-cols-6 p-2 bg-black text-gray-50 print:hidden">
     <div class="name">
       <a href="{{ site.url }}/">
         <strong>{{ person.name }}</strong>
