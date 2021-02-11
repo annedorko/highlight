@@ -1,0 +1,19 @@
+---
+  include:
+    - All
+  titles:
+    default: Brand Champion, Code Guru, Guest Blogger, Volunteer Support
+  company: StreamElements
+  location: Remote
+  url: https://streamelements.com/
+  type: Volunteer
+  dates:
+    start: 2019-03
+    end: Present
+  skills:
+    base:
+      - Writing
+    default:
+      - Podcast Production
+  descriptions:
+    default: Identified gaps in education for contributing to StreamElements and created content to correct the issue as a guest blogger. Design and develop custom widgets now freely available to the community. Provide technical support for community members on an as-available basis.

@@ -1,0 +1,19 @@
+---
+  include:
+    - All
+  titles:
+    default: Head of Education
+  company: WooRank
+  location: Remote
+  url: https://www.woorank.com/
+  type: Freelance
+  dates:
+    start: 2018-03
+    end: 2020-05
+  skills:
+    base:
+      - SEO
+    default:
+      - PHP
+  descriptions:
+    default: Identified education opportunities in SEO. Integrated SEO Prompts content into existing marketing materials. Planned out the creation of a new educational program. Coordinated with the marketing team to create the contents of the educational product. Researched, designed, and developed the technical elements for the educational platform.

@@ -1,0 +1,19 @@
+---
+  include:
+    - All
+  titles:
+    default: Server
+  company: Vail Resorts
+  location: Grand Teton National Park
+  url: http://www.vailresorts.com/
+  type: Full-time
+  dates:
+    start: 2015-07
+    end: 2015-10
+  skills:
+    base:
+      - Customer Service
+    default:
+      - Table Service
+  descriptions:
+    default: Provided a world-class hospitality experience for resort visitors. Identified opportunities to improve team spirits and maintained a good working dynamic between team members during shifts. Ensured management and sales goals were met and nurtured strong customer relationships during table service.

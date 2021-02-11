@@ -1,0 +1,20 @@
+---
+  include:
+    - All
+  titles:
+    default: Course Instructor
+  company: Platt College San Diego
+  location: San Diego, California, USA
+  url: https://platt.edu/
+  type: Full-time
+  dates:
+    start: 2012-11
+    end: 2013-05
+  skills:
+    base:
+      - PHP
+      - JavaScript
+    default:
+      - Photoshop
+  descriptions:
+    default: Identified knowledge gaps for art students to learn technical code skills. Adjusted and created curriculums to address these knowledge gaps. Conducted in-person courses.

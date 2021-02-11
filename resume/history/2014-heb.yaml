@@ -1,0 +1,19 @@
+---
+  include:
+    - All
+  titles:
+    default: Brand Ambassador
+  company: H-E-B
+  location: Austin, Texas, USA
+  url: https://www.heb.com/
+  type: Contract
+  dates:
+    start: 2014-02
+    end: 2014-07
+  skills:
+    base:
+      - Customer Service
+    default:
+      - Sampling
+  descriptions:
+    default: Participated in the HEB Start Fresh tour. Traveled weekly to attend shifts and perform tasks. Assisted on-site setup and breakdown, provided product information, and answered customer questions. Coordinated and provided long-distance supply pickup as needed to keep things running smoothly.

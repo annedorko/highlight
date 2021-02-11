@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="flex justify-center w-screen p-2 mt-3 print:p-0 print:w-full">
-  <div class="resume grid grid-cols-3 gap-8 w-2/3 max-w-screen-lg print:w-full print:p-0">
+<div class="flex justify-center w-screen p-2 mt-12 print:p-0 print:w-full">
+  <div class="resume grid grid-cols-1 gap-8 sm:grid-cols-3 px-8 py-2 md:p-0 max-w-screen-lg min-w-min print:w-full print:p-0 print:grid-cols-3">
       <div class="profile">
         <h2 class="font-bold text-4xl leading-8 print:text-3xl">{{ person.name }}</h2>
         <h1 class="font-bold my-2 text-2xl print:hidden print:h-0">{{ role.role }}</h1>
@@ -54,13 +54,13 @@
         {% for exp in experience %}
           {% set work = experience[exp] %}
           <div class="mt-4 job-history">
-            <h3 class="text-lg font-bold">{{ work.role }}</h3>
-            <ul class="text-sm">
-              <li>{{ work.company }} · {{ work.type }}</li>
+            <h3 class="text-lg font-bold leading-tight print:text-base print:leading-none">{{ work.role }}</h3>
+            <ul class="text-sm print:leading-tight">
+              <li><a href="{{ work.url }}" target="_blank">{{ work.company }}</a> · {{ work.type }}</li>
               <li class="text-gray-500">{{ work.start }} – {{ work.end }} ({{ work.length }})</li>
               <li class="text-gray-500">{{ work.location }}</li>
             </ul>
-            <p class="text-sm mt-2 print:text-xs">{{ work.description }}</p>
+            <p class="text-sm mt-2 print:mt-0 print:text-xs">{{ work.description }}</p>
           </div>
         {% endfor %}
       </div>

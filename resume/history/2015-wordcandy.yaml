@@ -1,0 +1,19 @@
+---
+  include:
+    - All
+  titles:
+    default: Content Writer
+  company: WordCandy
+  location: Remote
+  url: https://wordcandy.co/
+  type: Freelance
+  dates:
+    start: 2015-11
+    end: 2018-01
+  skills:
+    base:
+      - Writing
+    default:
+      - SEO
+  descriptions:
+    default: Researched keyword opportunities for content marketing material. Wrote keyword optimized articles and tutorials on technical topics for non-technical consumers. Sourced and optimized media to improve reader experience.

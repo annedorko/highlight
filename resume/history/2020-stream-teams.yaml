@@ -1,0 +1,19 @@
+---
+  include:
+    - All
+  titles:
+    default: Leadership Team
+  company: Stream Teams
+  location: Remote
+  url: https://www.annedorko.com/about
+  type: Volunteer
+  dates:
+    start: 2020-01
+    end: Present
+  skills:
+    base:
+      - Leadership
+    default:
+      - Coordination
+  descriptions:
+    default: Volunteer leader for the Wave Riders and Plant Army stream teams. Responsibilities include team graphics, mentorship, new member application review, event planning, bi-weekly leadership meetings, team communications, email list management, data cleaning, and website management.

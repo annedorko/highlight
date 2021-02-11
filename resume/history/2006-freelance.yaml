@@ -1,0 +1,20 @@
+---
+  include:
+    - All
+  titles:
+    default: Independent Contractor
+  company: Self
+  location: Remote
+  url: https://www.annedorko.com
+  type: Freelance
+  dates:
+    start: 2006-01
+    end: Present
+  skills:
+    base:
+      - PHP
+      - MySQL
+    default:
+      - WordPress
+  descriptions:
+    default: Helping businesses and individuals find and acquire necessary tools and assets. Identifying client needs through a discovery phase. Providing services such as digital strategy, web development, web design, automation and optimization, branding, communications, marketing assets, data analysis, and music production.
