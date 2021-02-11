@@ -2,7 +2,6 @@ import os
 import shutil
 import markdown
 import yaml
-from slugify import slugify
 from jinja2 import Environment, FileSystemLoader
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
@@ -42,6 +41,23 @@ def write_base_files(url):
         file.write(url)
 
 
+def generate_homepage(env, site):
+    meta = {
+        'title': site['person']['name']
+    }
+    # Set template
+    template = env.get_template('home.html')
+    # Write page to template
+    page = template.render(
+        meta=meta,
+        person=site['person'],
+        site=site['site'],
+    )
+    # Save page
+    with open('site/index.html', 'w') as file:
+        file.write(page)
+
+
 def generate_pages(env, site, single=False):
     PAGES = load_pages()
 
@@ -70,15 +86,7 @@ def generate_pages(env, site, single=False):
 
 
 def generate_resume(env, site):
-    ROLES = {}
-    with open("resume/roles.yaml", 'r') as stream:
-        try:
-            find = yaml.safe_load(stream)
-            # Turn list into dictionary
-            for f in find:
-                ROLES[f['role']] = f
-        except yaml.YAMLError as exc:
-            return
+    ROLES = site.get('site').get('roles')
     RESUMES = {}
     for role in ROLES:
         r = ROLES[role]
@@ -89,7 +97,7 @@ def generate_resume(env, site):
             'title': r.get('role')
         }
         # Set slug
-        slug = slugify(r.get('role'))
+        slug = r.get('slug')
         if 'slug' in meta:
             slug = meta.slug
         # Set template
@@ -115,5 +123,6 @@ def generate_site(site, delete=True):
     if delete == True:
         remove_old_site()
         write_base_files(site['site'].get('cname'))
+    generate_homepage(env, site)
     generate_pages(env, site)
     generate_resume(env, site)

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="page flex flex-wrap justify-center mt-10">
+  <div class="flex w-full justify-center mb-3">
+    <img src="{{ person.gravatar }}" class="inline-block rounded-full w-32 shadow-md" />
+  </div>
+  <div class="w-1/2 mt-1 text-center">
+    <h1 class="mb-0 font-bold text-6xl">{{ person.name }}</h1>
+    <p class="mt-0 text-3xl text-gray-600 leading-tight">{{ person.taglines.default }}</p>
+  </div>
+  <div class="w-full text-center mt-8">
+    <h2 class="text-2xl mb-4">What are you looking for?</h2>
+    <ul>
+    {% for r in site.roles %}
+      {% set role = site.roles[r] %}
+      <li class="mb-3 font-bold"><a href="{{ role.slug }}" class="underline transition-all text-blue-800	hover:text-blue-600 duration-500">{{ role.role }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="text-2xl mt-8 mb-2">Learn more:</h2>
+    <ul>
+      {% for link in person.links %}
+        <li class="text-sm">
+          <a href="{{ person.links[link]['url'] }}" target="_blank" rel="me">
+            <span class="w-5 inline-block">{{ person.links[link]['icon'] }}</span>
+            <span>{{ person.links[link]['text'] }}</span></a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="mt-8 text-sm text-gray-600">Located in {{ person.contact.timezone }}</p>
+
+  </div>
+</div>
+
+{% endblock %}

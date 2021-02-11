@@ -4,7 +4,7 @@ try:
     from yaml import CLoader as Loader, CDumper as Dumper
 except ImportError:
     from yaml import Loader, Dumper
-from app.helpers import set_gravatar, load_pages
+from app.helpers import set_gravatar, load_pages, load_roles
 
 
 def get_global(compile=False):
@@ -15,7 +15,7 @@ def get_global(compile=False):
     about['gravatar'] = set_gravatar(
         about['contact']['email'],
         'assets/media/avatar.jpg',
-        40)
+        250)
     # Clean links
     if 'links' in about:
         links = {}
@@ -45,19 +45,27 @@ def get_global(compile=False):
     # Get pages for navigation
     NAV = {}
     PAGES = load_pages()
+    SET_PAGES = {}
     for page in PAGES:
         p = PAGES[page]
         # TODO: Optional page exclusion
         title = p['meta'].get('title')
         if 'anchor' in p['meta']:
             title = p['meta'].get('anchor')
-        NAV[p['filename']] = {
+        SET_PAGES[p['filename']] = {
             'href': settings['url'] + '/' + p['filename'],
-            'anchor': title
+            'anchor': title,
+            'order': p['meta'].get('order') if 'order' in p['meta'] else 2,
         }
+    sort_pages = sorted(
+        SET_PAGES.items(), key=lambda x: x[1]['order'])
+    for i, p in sort_pages:
+        NAV[i] = p
     settings['nav'] = NAV
+    # Get roles
+    settings['roles'] = load_roles()
     site = {
         "site": settings,
-        "person": about
+        "person": about,
     }
     return site

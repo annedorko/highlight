@@ -5,6 +5,7 @@ import markdown
 import yaml
 import datetime
 import math
+from slugify import slugify
 from operator import itemgetter
 
 
@@ -180,6 +181,21 @@ def load_history(role):
     for i, h in sort_past:
         WORK[i] = h
     return WORK
+
+
+def load_roles():
+    ROLES = {}
+    with open("resume/roles.yaml", 'r') as stream:
+        try:
+            find = yaml.safe_load(stream)
+            # Turn list into dictionary
+            for f in find:
+                ROLES[f['role']] = f
+                if not 'slug' in ROLES[f['role']]:
+                    ROLES[f['role']]['slug'] = slugify(f['role'])
+        except yaml.YAMLError as exc:
+            print('error')
+    return ROLES
 
 
 def load_pages():

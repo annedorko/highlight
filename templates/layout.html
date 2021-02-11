@@ -29,16 +29,15 @@
     </style>
 </head>
 <body class="min-h-screen bg-gray-100">
-  <nav class="grid grid-cols-6 p-2 bg-black text-gray-50 print:hidden">
+  <nav class="grid grid-cols-6 px-4 py-2 bg-white text-gray-90 print:hidden">
     <div class="name">
       <a href="{{ site.url }}/">
         <strong>{{ person.name }}</strong>
-        <img src="{{ person.gravatar }}" class="inline-block" />
       </a>
     </div>
-    <ul class="col-span-5 text-right">
+    <ul class="col-span-5 flex flex-nowrap justify-end">
       {% for link in site.nav %}
-        <li><a href="{{ site.nav[link].href }}">{{ site.nav[link].anchor }}</a></li>
+        <li class="ml-6"><a href="{{ site.nav[link].href }}">{{ site.nav[link].anchor }}</a></li>
       {% endfor %}
     </ul>
   </nav>
