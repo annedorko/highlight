@@ -31,7 +31,7 @@ The program may work on lower versions of Node or NPM.
 ### Installation
 
 1. Clone this repo into a clean project folder.
-2. Install NPM packages.
+2. Install NPM packages using `npm install`
 3. Generate the site in the console using `python site.py`
 
 Run `python site.py server` and navigate to [http://localhost:4242](http://localhost:4242) to preview your site live.
