@@ -8,7 +8,7 @@ from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
 from app.server import run
 from app.load import get_global
-from app.helpers import load_pages
+from app.helpers import load_pages, collect_history
 
 
 class RegenerateSite(LoggingEventHandler):

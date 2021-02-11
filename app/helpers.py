@@ -4,6 +4,10 @@ import os
 import markdown
 
 
+def collect_history(role):
+    HISTORY = {}
+
+
 def load_pages():
     PAGES = {}
     for page in os.listdir('pages'):

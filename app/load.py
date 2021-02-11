@@ -52,7 +52,7 @@ def get_global(compile=False):
         if 'anchor' in p['meta']:
             title = p['meta'].get('anchor')
         NAV[p['filename']] = {
-            'href': settings['url'] + '/' + p['filename'] + '.html',
+            'href': settings['url'] + '/' + p['filename'],
             'anchor': title
         }
     settings['nav'] = NAV
