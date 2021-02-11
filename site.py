@@ -10,13 +10,13 @@ from app.helpers import tailwind_os
 # Set global variables, prepare compile
 if 'compile' in sys.argv:
     site = get_global(compile=True)
+    generate_site(site)
     os.system(tailwind_os('compile'))
 else:
     site = get_global()
-
-# Generate HTML site
-generate_site(site)
-os.system(tailwind_os())
+    # Generate HTML site
+    generate_site(site)
+    os.system(tailwind_os())
 
 # Run dev server with full Tailwind CSS
 if 'server' in sys.argv:
