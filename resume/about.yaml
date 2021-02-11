@@ -10,8 +10,42 @@
     Musical Artist:
       - skill: Violin
         years: 12
+      - skill: Guitar & keyboard
+        years: 15
+      - skill: Chorus & theater
+        years: 10
+      - skill: Songwriting
+        years: 7
+      - skill: Jingles & themes
+        years: 1
       - skill: Music Production
         years: 2
+      - skill: Mixing & mastering
+        years: 1
+    Web & Marketing:
+      - skill: Web design
+        years: 15
+      - skill: Web development
+        years: 13
+      - skill: SEO
+        years: 13
+      - skill: Traffic analytics
+        years: 13
+      - skill: Ads management
+        years: 12
+      - skill: Content marketing
+        years: 12
+    Multimedia:
+      - skill: Graphic design
+        years: 15
+      - skill: Photography
+        years: 16
+      - skill: Film editing
+        years: 15
+      - skill: Podcast production
+        years: 3
+      - skill: Live streaming
+        years: 3
   links:
     Homepage:
       url: https://www.annedorko.com
@@ -27,4 +61,4 @@
   contact:
     email: anne@dorko.tv
     phone: +1 512 774 4332
-    timezone: CET
+    timezone: CET/CEST
