@@ -38,7 +38,7 @@ Run `python site.py server` and navigate to [http://localhost:4242](http://local
 
 Run `python site.py watch` to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates`.
 
-Run `python site.py compile` to compile the site using Tailwind CSS at production size.
+Run `python site.py compile` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
 
 ### Usage
 
