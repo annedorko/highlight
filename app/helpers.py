@@ -39,7 +39,7 @@ def date_diff(older, newer):
                 tStr = "mo"
             else:
                 tStr = "mos"
-            str += " %s %s" % (round(months), tStr)
+            str += " %s %s" % (math.ceil(months), tStr)
         return str
     elif months > 1:
         if months == 1:
@@ -108,7 +108,7 @@ def load_history(role):
                     skills = base_skills + special_skills
                     description = exp.get('descriptions')[role] if role in exp.get(
                         'descriptions') else exp.get('descriptions')['default']
-                    # TODO: Format dates
+                    # TODO: start dates at first of month, end dates at last day of month
                     start = ''
                     end = 'Present'
                     if 'dates' in exp:

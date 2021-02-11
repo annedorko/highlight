@@ -1,0 +1,20 @@
+---
+  include:
+    - All
+  titles:
+    default: Web Coordinator
+  company: Healthy Dining
+  location: San Diego, California, USA
+  url: https://www.mymenuusa.com/
+  type: Full-time
+  dates:
+    start: 2010-10
+    end: 2011-02
+  skills:
+    base:
+      - Web Design
+      - WordPress
+    default:
+      - Photoshop
+  descriptions:
+    default: Identified opportunities for improved performance on the front-facing website. Designed and implemented necessary marketing graphics. UX and UI testing and design, implemented custom development solutions to improve visual data results when searching for restaurants or dishes.

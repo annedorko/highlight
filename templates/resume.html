@@ -53,14 +53,14 @@
         <p class="text-xl text-gray-600 pb-2 mb-2 border-b-2 leading-tight print:text-lg print:leading-tight">{{ role.summary }}</p>
         {% for exp in experience %}
           {% set work = experience[exp] %}
-          <div class="mt-4">
+          <div class="mt-4 job-history">
             <h3 class="text-lg font-bold">{{ work.role }}</h3>
             <ul class="text-sm">
               <li>{{ work.company }} · {{ work.type }}</li>
               <li class="text-gray-500">{{ work.start }} – {{ work.end }} ({{ work.length }})</li>
               <li class="text-gray-500">{{ work.location }}</li>
             </ul>
-            <p class="text-sm mt-2">{{ work.description }}</p>
+            <p class="text-sm mt-2 print:text-xs">{{ work.description }}</p>
           </div>
         {% endfor %}
       </div>
