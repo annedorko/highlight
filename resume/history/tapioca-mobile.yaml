@@ -1,0 +1,33 @@
+---
+  include:
+    - Front End Developer
+  titles:
+    default: Search Engine Marketer
+    Front End Developer: Web Developer
+    Graphic Designer: In-House Graphic Designer
+  company: Tapioca Mobile, Inc.
+  location: San Diego, California, USA
+  url: https://www.crunchbase.com/organization/tapioca-mobile
+  type: Full-time
+  dates:
+    start: 2008-01
+    end: 2010-04
+  skills:
+    base:
+      - Ruby
+      - HTML
+      - CSS
+      - JavaScript
+      - Agile Methodoogies
+    default:
+      - Ruby on Rails
+      - Quality Assurance
+      - Website Optimization
+    Online Marketer:
+      - Keyword Research
+    Business Analyst:
+      - Keyword Opportunities
+      - Establish Design Goals
+      - Team Communications
+  descriptions:
+    default: Created and improved UX and UI in an Agile work environment. Front-end development with Ruby on Rails. Designed and managed our front-facing business website. Communicated with engineers and business development teams to establish design goals. Tested bugs for Quality Assurance. Identifyed keyword opportunities and website optimization.

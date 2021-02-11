@@ -1,7 +1,9 @@
 ---
-  roles:
+  include:
+    - All
+  titles:
     default: Search Engine Marketer
-    Front End Developer: Web Developer
+    Front End Developer: Web Manager
     Graphic Designer: In-House Graphic Designer
   company: Casa Palmera
   location: Del Mar, California, USA

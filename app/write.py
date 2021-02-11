@@ -8,7 +8,7 @@ from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
 from app.server import run
 from app.load import get_global
-from app.helpers import load_pages, collect_history
+from app.helpers import load_pages, load_history
 
 
 class RegenerateSite(LoggingEventHandler):
@@ -82,6 +82,9 @@ def generate_resume(env, site):
     RESUMES = {}
     for role in ROLES:
         r = ROLES[role]
+        # Get related history items
+        history = load_history(r['role'])
+        # Set meta
         meta = {
             'title': r.get('role')
         }
@@ -99,7 +102,8 @@ def generate_resume(env, site):
             meta=meta,
             role=r,
             person=site['person'],
-            site=site['site']
+            site=site['site'],
+            experience=history
         )
         # Save page
         with open('site/' + slug + '.html', 'w') as file:
