@@ -36,6 +36,19 @@
             </li>
           {% endfor %}
         </ul>
+        <h3 class="mt-4 text-xl font-bold">Education</h3>
+        <ul>
+          {% for edu in person.education %}
+            <li>
+              <h4 class="mt-2 text-lg">{{ edu }}</h4>
+              <p class="text-sm">
+                {{ person.education[edu].school }}<br />
+                {{ person.education[edu].degree }}, {{ person.education[edu].study }}<br />
+                {{ person.education[edu].graduation }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="resume col-span-2">
         <p class="text-2xl text-gray-600 pb-2 mb-2 border-b-2">{{ role.summary }}</p>

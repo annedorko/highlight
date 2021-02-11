@@ -62,3 +62,19 @@
     email: anne@dorko.tv
     phone: +1 512 774 4332
     timezone: CET/CEST
+  education:
+    MBA:
+      school: University of the People
+      degree: Masters
+      study: Business Administration
+      graduation: 2022
+    B.S. Media Arts:
+      school: Platt College San Diego
+      degree: Bachelor of Science
+      study: Media Arts
+      graduation: 2008
+    A.A. Graphic Design:
+      school: Platt College San Diego
+      degree: Associates
+      study: Graphic Design
+      graduation: 2007
