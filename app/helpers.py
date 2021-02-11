@@ -1,5 +1,32 @@
 import urllib
 import hashlib
+import os
+import markdown
+
+
+def load_pages():
+    PAGES = {}
+    for page in os.listdir('pages'):
+        file_path = os.path.join('pages', page)
+
+        with open(file_path, 'r') as file:
+            md = markdown.Markdown(extensions=['meta'])
+            # Process HTML
+            html = md.convert(file.read())
+            # Process metadata, return each as string
+            meta = {}
+            for m in md.Meta:
+                meta[m] = md.Meta[m][0]
+            # Clean filename
+            filename_ext = os.path.basename(file.name)
+            filename = os.path.splitext(filename_ext)[0]
+            # Add to overall page collection
+            PAGES[page] = {
+                'filename': filename,
+                'content': html,
+                'meta': meta,
+            }
+    return PAGES
 
 
 def tailwind_os(status=''):

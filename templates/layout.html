@@ -10,11 +10,15 @@
 <body class="min-h-screen bg-gray-100">
   <nav class="grid grid-cols-6 p-2 bg-black text-gray-50">
     <div class="name">
-      <strong>{{ person.name }}</strong>
-      <img src="{{ person.gravatar }}" class="inline-block" />
+      <a href="{{ site.url }}/">
+        <strong>{{ person.name }}</strong>
+        <img src="{{ person.gravatar }}" class="inline-block" />
+      </a>
     </div>
     <ul class="col-span-5 text-right">
-      <li><a href="">Pages</a></li>
+      {% for link in site.nav %}
+        <li><a href="{{ site.nav[link].href }}">{{ site.nav[link].anchor }}</a></li>
+      {% endfor %}
     </ul>
   </nav>
   <div id="main">
