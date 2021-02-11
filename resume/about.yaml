@@ -1,5 +1,4 @@
 ---
-  homepage: https://www.annedorko.com
   name: Anne Dorko
   taglines:
     default: I blend data and art to make things that make a difference.
@@ -13,6 +12,19 @@
         years: 12
       - skill: Music Production
         years: 2
-  email: anne@dorko.tv
-  phone: +1 512 774 4332
-  timezone: CET
+  links:
+    Homepage:
+      url: https://www.annedorko.com
+      text: annedorko.com
+    LinkedIn:
+      url: https://www.linkedin.com/in/annedorko
+      text: 'LinkedIn'
+      icon: '<i class="fab fa-linkedin"></i>'
+    Twitter:
+      url: https://twitter.com/annedorko
+      text: '@annedorko'
+      icon: '<i class="fab fa-twitter"></i>'
+  contact:
+    email: anne@dorko.tv
+    phone: +1 512 774 4332
+    timezone: CET

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="flex justify-center w-screen p-2 mt-3">
+  <div class="resume grid grid-cols-3 w-2/3 max-w-screen-lg">
+      <div class="profile">
+        <h2>{{ person.name }}</h2>
+        <ul>
+          {% for contact in person.contact %}
+          <li>{{ person.contact[contact] }}</li>
+          {% endfor %}
+        </ul>
+        <ul>
+          {% for link in person.links %}
+            <li class="text-sm">
+              <a href="{{ person.links[link]['url'] }}" target="_blank" rel="me">
+                <span class="w-5 inline-block">{{ person.links[link]['icon'] }}</span>
+                <span>{{ person.links[link]['text'] }}</span></a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="resume col-span-2">
+        <h1>{{ role.role }}</h1>
+        <p class="text-lg">{{ role.summary }}</p>
+      </div>
+  </div>
+</div>
+{% endblock %}

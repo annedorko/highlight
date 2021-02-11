@@ -13,9 +13,29 @@ def get_global(compile=False):
         about = load(about_file, Loader=Loader)
     # Get Gravatar image
     about['gravatar'] = set_gravatar(
-        about['email'],
+        about['contact']['email'],
         'assets/media/avatar.jpg',
         40)
+    # Clean links
+    if 'links' in about:
+        links = {}
+        all_links = about['links']
+        for link in all_links:
+            fresh_link = {}
+            if not type(all_links[link]) is dict:
+                fresh_link = {
+                    'url': all_links[link],
+                    'text': all_links[link],
+                    'icon': '<i class="fas fa-globe"></i>'
+                }
+            else:
+                fresh_link = all_links[link]
+                if not 'text' in fresh_link:
+                    fresh_link['text'] = fresh_link['url']
+                if not 'icon' in fresh_link:
+                    fresh_link['icon'] = '<i class="fas fa-globe"></i>'
+            links[fresh_link['url']] = fresh_link
+        about['links'] = links
     # Get global site settings
     with open('config.yaml', 'r') as config:
         settings = load(config, Loader=Loader)

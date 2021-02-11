@@ -7,13 +7,17 @@ from app.write import generate_site
 from app.server import run
 from app.helpers import tailwind_os
 
+site = get_global()
+
 # Set global variables, prepare compile
 if 'compile' in sys.argv:
     site = get_global(compile=True)
     generate_site(site)
     os.system(tailwind_os('compile'))
-else:
-    site = get_global()
+elif 'dev' in sys.argv:
+    # Generate HTML site
+    generate_site(site, False)
+elif not 'server' in sys.argv:
     # Generate HTML site
     generate_site(site)
     os.system(tailwind_os())
