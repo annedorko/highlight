@@ -159,9 +159,9 @@ Every role requires:
 
 - Role/Title Name
 - Professional Summary
-- List of Essential Skills (Recommended 6-9)
+- List of Essential Skills (Multiples of 3 work best)
 
-![Role Summary Preview](https://user-images.githubusercontent.com/1281008/107766163-5ca4dc80-6d33-11eb-9448-33310821f2f0.png)
+<p align="center"><img style="max-width: 250px; height: auto;" src="https://user-images.githubusercontent.com/1281008/107766163-5ca4dc80-6d33-11eb-9448-33310821f2f0.png" /></p>
 
 This information will appear at the top of your resume.
 
