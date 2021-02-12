@@ -1,6 +1,15 @@
 ---
   - role: Front End Developer
     summary: Creative, self-motivated front-end developer with over 10 years experience building websites and web apps. Proficient in HTML, CSS, JavaScript, Node.js, React, PHP, Ruby, Python, Linux servers, and databases. Passionate about designing innovative solutions.
+    skills:
+      - HTML, CSS, JavaScript
+      - Node.js, React, Next.js
+      - WordPress (Custom)
+      - Extra
   - role: Content Writer
     summary: Unique professional summary for Content Writer.
     slug: writer
+    skills:
+      - Topic Research
+      - Keyword Research
+      - Editing

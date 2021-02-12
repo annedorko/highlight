@@ -2,10 +2,24 @@
 @tailwind base;
 @tailwind components;
 
+body {
+  font-family: 'auto-pro-new',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+body em {
+  font-family: 'auto-pro-1-new',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'scarlet',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: 400;
+}
+.profile h4 {
+  font-family: 'auto-pro-small-caps',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: 700;
+  @apply tracking-tight;
+}
 .page h1 {
   @apply text-center;
 }
-
 .btn {
   @apply px-4 py-2 bg-blue-600 text-white rounded;
 }

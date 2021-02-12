@@ -40,7 +40,7 @@
                 {% for skill in person.skills[category] %}
                 <li class="grid grid-cols-4">
                   <span class="col-span-3">{{ skill.skill }}</span>
-                  <span class="text-right">{{ skill.years }}y</span>
+                  <span class="text-right">{{ skill.years }} {{ 'yr' if skill.years == 1 else 'yrs' }}</span>
                 </li>
                 {% endfor %}
               </ul>
@@ -50,11 +50,19 @@
       </div>
       <div class="resume col-span-2">
         <h1 class="hidden font-bold my-2 text-2xl print:block">{{ role.role }}</h1>
-        <p class="text-xl text-gray-600 pb-2 mb-2 border-b-2 leading-tight print:text-lg print:leading-tight">{{ role.summary }}</p>
+        <p class="text-xl text-gray-600 pb-2 leading-tight print:text-lg print:leading-tight">{{ role.summary }}</p>
+        <div class="pt-4 pb-3 my-2 border-t-2 border-b-2 print:pt-3 print:pb-2">
+          <h2 class="text-2xl font-bold leading-tight print:text-xl print:leading-none">Skillset</h2>
+          <ul class="grid grid-cols-2 md:grid-cols-3 print:grid-cols-3 print:text-xs mt-4 print:mt-2">
+            {% for skill in role.skills %}
+              <li class="pb-1">{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        </div>
         {% for exp in experience %}
           {% set work = experience[exp] %}
-          <div class="mt-4 job-history">
-            <h3 class="text-lg font-bold leading-tight print:text-base print:leading-none">{{ work.role }}</h3>
+          <div class="mt-6 job-history">
+            <h3 class="text-lg font-bold leading-tight mb-1 print:text-base print:leading-none">{{ work.role }}</h3>
             <ul class="text-sm print:leading-tight">
               <li><a href="{{ work.url }}" target="_blank">{{ work.company }}</a> · {{ work.type }}</li>
               <li class="text-gray-500">{{ work.start }} – {{ work.end }} ({{ work.length }})</li>
