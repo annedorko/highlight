@@ -76,6 +76,8 @@ This document is for the data that is the same across all your resume and portfo
 - Contact information
 - Education
 
+Your email will also be used to pull your Gravatar image, so I recommend ensuring you have an account there associated with your work email. Set up a professional photo that looks great on the homepage.
+
 #### Skills
 
 Categories can be written using alphanumeric values followed by a colon. If you need to include a colon in your category name, be sure to surround it with quotes.
@@ -188,13 +190,113 @@ Here is a blank template with a few required stand-ins if you’d like to start 
 
 ### Step 5. Add Your Work History
 
-Modify career history under `resume/history/`
+Without adding any career history, your generated resumes will look a bit empty. You will need to add work history to your `resume/history/` folder.
+
+Each file represents a single element that will show up on your resumes. You will need to add a new file per work history item.
+
+The file names don’t matter, so long as they are unique. I use a `YYYY-company-name.yaml` format so it’s easier to find what I’m looking for later.
+
+These documents define:
+
+- Which resumes to include the experience on.
+- The role you played, adjustable per target resume role.
+- Company name
+- Company location
+- Company URL
+- Type of work (Full-time, part-time, freelance, etc.)
+- Dates: Start and end. Requires a 'YYYY-MM' format for both values, or you can use 'Present' for end date.
+- Skills used on the job. Base is for all target roles, default is used by default, or you can add target-role-specific lists as well. Will be relevant on portfolio pages in the future.
+- Description, adjustable per target resume role.
+
+Titles and descriptions all both required, and both require default values.
+
+Skills are not required. If included, skills require both base and default values. (Currently, skills are not necessary to add here but will be helpful for when portfolio pages are available in the app.)
+
+If you do not follow the required date format, the script will not run correctly. The script will automatically supply the number of years and months.
+
+#### Adding and Customizing Work Experience to a Target Role Resume
+
+To add a work experience to all resumes, use:
+```
+include:
+  - All
+```
+
+To add a work experience to specific resumes, list them under include in a list.
+
+```
+include:
+  - Target Role
+  - Target Role 2
+  - Target Role 3
+```
+
+Titles and descriptions need a default title, to start. If you would like to change your title role for specific resumes, you can do so by listing the name of the target role followed by the name of your changed title.
+
+This is particularly helpful if you played many roles within a company, and want to highlight one role over another for a specific resume.
+
+```
+titles:
+  default: Job Title
+  Target Role: Adjusted Job Title
+  Target Role 3: Secondary Job Title
+```
+
+In the above example, "Job Title" will show by default on any resume you include it on. Resumes for "Target Role" and "Target Role 3" will be customized to use the provided titles.
+
+The same goes for descriptions!
+
+```
+descriptions:
+  default: Job Title
+  Target Role 2: Adjusted Job Title
+```
+
+You can add as many or few customizations as necessary. The default will always be used if you have not provided a specific version. I recommend starting with just the default, and adding customizations as needed when you generate new resumes.
+
+#### history/*.yaml Template
+
+Here is a blank template with a few required stand-ins if you’d like to start from scratch. Feel free to cross-reference these values with the example history files to better understand how to use them.
+
+```
+---
+  include:
+    - All
+  titles:
+    default: Job Title
+  company: Company Name
+  location: Company City, Country
+  url: https://www.example.com/
+  type: ''
+  dates:
+    start: 2010-03
+    end: Present
+  skills:
+    base:
+      - Skills
+    default:
+      - Other Skills
+  descriptions:
+    default: Default description of experience.
+```
 
 ### Step 6. Edit, Add, and Delete Site Pages
 
-Your site pages are managed in markdown files under `pages/`
+Finally, you will need to adjust your site pages! You can add as many or few pages as you’d like. These will be linked to at the top of your site in the navigation bar. These will be useful if you plan to send the web versions of your resumes to people.
+
+Your site pages are managed in markdown files under `pages/`. Here is an [introduction to markdown](https://www.markdownguide.org/getting-started/) if you are not familiar with it.
+
+Since your homepage is generated automatically based on the `about.yaml` and `roles.yaml` files, do not create an `index.md` page. Otherwise, you can create whatever pages you like.
+
+I have included a simple About and Contact page.
+
+You can customize the order the pages show up in your navigation by changing the order value in the meta data. Lower numbers will show first, higher numbers will show later. In the example pages you can see that the About page shows first, with an order of `0`, and the contact page shows second, with an order of `2`.
+
+You can set `title`, `slug`, and `order` in the markdown metadata.
 
 ### Step 7. Compile Your Website for Uploading
+
+If you are running the server and watch commands, you will have been able to refresh your website to see how it changes while you adjust your data.
 
 Once you are satisfied with your site, use CTRL+C in the console to stop watching for changes in your site and close the server.
 
@@ -202,7 +304,9 @@ Run `python site.py compile` to compile the site using Tailwind CSS at productio
 
 ### Step 8: Print to PDF Using Chrome
 
-If you need PDF versions of your resume, as I do, there are special print CSS styles. Navigate to your live page and _Print to PDF_. I recommend using Chrome if you are experiencing any issues.
+If you need PDF versions of your resume, as I do, there are special print CSS styles. Navigate to your desired resume page and _Print to PDF_. I recommend using Chrome if you experience any formatting issues.
+
+You can adjust the font families in `styles.css` if you are not happy with the defaults.
 
 ## Roadmap
 
