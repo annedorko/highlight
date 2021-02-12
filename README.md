@@ -91,16 +91,16 @@ Links can be plain text, like so:
 
 `Homepage: 'https://www.annedorko.com'`
 
-Or, you can optionally provide a URL, anchor text, and even a [FontAwesome icon](https://fontawesome.com/icons?d=gallery&m=free).
+Or, you can optionally provide a URL, anchor text, and even a [FontAwesome icon](https://fontawesome.com/icons?d=gallery&m=free). This makes your resume look much cleaner and enables you to include icons for Twitter, LinkedIn, or whatever sites you may be referencing.
 
-**Without icon:**
+_Without icon:_
 ```
 Homepage:
   url: 'https://www.annedorko.com'
   text: 'annedorko.com'
 ```
 
-**With icon:**
+_With icon:_
 ```
 Homepage:
   url: 'https://www.annedorko.com'
@@ -110,40 +110,41 @@ Homepage:
 
 #### about.yaml Template
 
-Here is a blank template with a few required stand-ins if you’d like to start from scratch:
+Here is a blank template with a few required stand-ins if you’d like to start from scratch. Feel free to cross-reference these values with the default about.yaml to better understand how to use them.
 
 ```
-name: ''
-taglines:
-  default: ''
-open:
-  available: true
-  seeking: ''
-  location: ''
-skills:
-  Your Category Here:
-    - skill: Write a Skill
-      years: 1
-    - skill: Another Skill
-      years: 4
-  Your 2nd Category Here:
-    - skill: Another Skill
-      years: 2
-links:
-  Homepage:
-    url: ''
-    text: ''
-  LinkedIn: 'https://linkedin.com'
-contact:
-  email: ''
-  phone: ''
-  timezone: ''
-education:
-  Degree Name Here:
-    school: ''
-    degree: ''
-    study: ''
-    graduation: ''
+---
+  name: ''
+  taglines:
+    default: ''
+  open:
+    available: true
+    seeking: ''
+    location: ''
+  skills:
+    Your Category Here:
+      - skill: Write a Skill
+        years: 1
+      - skill: Another Skill
+        years: 4
+    Your 2nd Category Here:
+      - skill: Another Skill
+        years: 2
+  links:
+    Homepage:
+      url: ''
+      text: ''
+    LinkedIn: 'https://linkedin.com'
+  contact:
+    email: ''
+    phone: ''
+    timezone: ''
+  education:
+    Degree Name Here:
+      school: ''
+      degree: ''
+      study: ''
+      graduation: ''
 ```
 
 ### Step 4. Add Your Target Roles
