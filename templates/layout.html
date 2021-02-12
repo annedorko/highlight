@@ -22,14 +22,17 @@
         margin: 0px;
     } */
     body {
-        margin: 8mm 10mm;
+        margin: 8mm 10mm 0mm 10mm;
     }
+    /* #main {
+      border: 1px solid blue;
+    } */
     .job-history {
       page-break-inside: avoid;
     }
     </style>
 </head>
-<body class="min-h-screen bg-gray-100">
+<body class="min-h-screen bg-gray-100 print:min-h-0">
   <nav class="grid grid-cols-6 px-4 py-2 bg-white text-gray-90 print:hidden">
     <div class="name">
       <a href="{{ site.url }}/">
