@@ -3,6 +3,11 @@
     - All
   titles:
     default: Independent Contractor
+    Content Producer: Designer, Multimedia Editor, and Online Marketer
+    Content Writer: Content Marketer, Writer, Consultant
+    Front End Python Developer: Web Designer and Developer
+    Front End Developer: Web Designer and Developer
+    WordPress Developer: WordPress Designer and Developer
   company: Self
   location: Remote
   url: https://www.annedorko.com
@@ -17,4 +22,7 @@
     default:
       - WordPress
   descriptions:
-    default: Helping businesses and individuals find and acquire necessary tools and assets. Identifying client needs through a discovery phase. Providing services such as digital strategy, web development, web design, automation and optimization, branding, communications, marketing assets, data analysis, and music production.
+    default: Managing remote clients globally. Work including ad-hoc services, graphic, design, branding, WordPress plugin and theme development, general web development, data analysis, educational platform design, online marketing services, support, and consulting.
+    Business Analyst: Helping businesses and individuals find and acquire necessary tools and assets. Identifying client needs through a discovery phase. Providing services such as digital strategy, web development, web design, automation and optimization, branding, communications, marketing assets, data analysis, and music production.
+    Content Producer: Managing remote clients. Work including ad-hoc services, web hosting maintainence, graphic, design, web development, software development, data analysis, educational platform design, online marketing services, support, and consulting.
+    Content Writer: Managing remote clients. Work including ad-hoc services, content planning, writing, consulting, online marketing services, and guest blogging.

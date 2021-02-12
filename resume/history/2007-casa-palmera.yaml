@@ -1,6 +1,6 @@
 ---
   include:
-    - All
+    - None
   titles:
     default: Search Engine Marketer
     Front End Developer: Web Manager

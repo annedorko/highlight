@@ -1,6 +1,6 @@
 ---
   include:
-    - All
+    - None
   titles:
     default: Server
   company: Vail Resorts

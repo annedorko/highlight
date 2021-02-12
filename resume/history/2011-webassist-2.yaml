@@ -1,6 +1,9 @@
 ---
   include:
-    - All
+    - Business Analyst
+    - Front End Developer
+    - Front End Python Developer
+    - WordPress Developer
   titles:
     default: Software Engineer
   company: WebAssist

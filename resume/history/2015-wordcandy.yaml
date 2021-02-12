@@ -1,8 +1,15 @@
 ---
   include:
-    - All
+    - Content Producer
+    - Front End Python Developer
+    - Front End Developer
+    - WordPress Developer
+    - Content Writer
   titles:
-    default: Content Writer
+    default: WordPress Tutorial Writer
+    Content Producer: Educational Content Writer
+    Front End Python Developer: Technical Tutorial Writer
+    Content Writer: Content Writer
   company: WordCandy
   location: Remote
   url: https://wordcandy.co/
@@ -16,4 +23,5 @@
     default:
       - SEO
   descriptions:
-    default: Researched keyword opportunities for content marketing material. Wrote keyword optimized articles and tutorials on technical topics for non-technical consumers. Sourced and optimized media to improve reader experience.
+    default: Ghost-writer for technical articles focusing on teaching nontechnical readers how to work with WordPress.
+    Business Analyst: Researched keyword opportunities for content marketing material. Wrote keyword optimized articles and tutorials on technical topics for non-technical consumers. Sourced and optimized media to improve reader experience.

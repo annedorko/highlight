@@ -1,6 +1,6 @@
 ---
   include:
-    - All
+    - None
   titles:
     default: Software Engineer
   company: WebAssist

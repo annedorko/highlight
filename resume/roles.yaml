@@ -1,15 +1,70 @@
 ---
   - role: Front End Developer
-    summary: Creative, self-motivated front-end developer with over 10 years experience building websites and web apps. Proficient in HTML, CSS, JavaScript, Node.js, React, PHP, Ruby, Python, Linux servers, and databases. Passionate about designing innovative solutions.
+    summary: Creative, self-motivated front-end developer with over 10 years experience building websites and web apps. Proficient in WordPress, Shopify, HTML, CSS, JavaScript, Node.js, React, PHP, Ruby, Python, Linux servers, and databases. Passionate about designing innovative solutions.
     skills:
       - HTML, CSS, JavaScript
+      - Custom WordPress
+      - Divi, Elementor
+      - Git, Github, Bitbucket
+      - Code Linting
+      - CSS Frameworks
+      - Shopify
+      - Database Management
       - Node.js, React, Next.js
-      - WordPress (Custom)
-      - Extra
+  - role: Front End Python Developer
+    summary: Creative, self-motivated front-end developer with over 10 years experience building websites and web apps. Proficient in HTML, CSS, JavaScript, Node.js, React, PHP, Ruby, Python, Linux servers, and databases. Passionate about designing innovative solutions.
+    skills:
+      - Python
+      - Django
+      - JavaScript
+      - SQL
+      - Linux Servers
+      - React
+      - Git
+      - Github
+      - Cloud Services
+  - role: WordPress Developer
+    summary: Creative, self-motivated WordPress developer with over 10 years experience building websites and web apps. Proficient in WordPress, WooCommerce, Shopify, custom plugin development, custom API integrations, HTML, CSS, JavaScript, PHP, and databases. Passionate about designing innovative solutions.
+    skills:
+      - WordPress
+      - Theme Development
+      - Plugin Development
+      - WooCommerce
+      - HTML, CSS, JS
+      - MySQL
+  - role: Business Analyst
+    summary: Effective remote communicator, balancing stakeholder needs with technical operational requirements or restrictions. Comfortable with self-management. Always evaluating for optimization opportunities. Able to teach and discuss complex technical topics with non-technical people. Thrives in collaborative roles with participative team leadership.
+    skills:
+      - SQL & Databases
+      - Jira, Confluence, et al.
+      - HTML, CSS, JS
+      - R, R Studio, Tableau
+      - Lucidchart
+      - Microsoft Office
+      - Content Management
+      - Linux Servers
+      - Python, Ruby, PHP
+      - API Integrations
+      - Node.js
+      - Dropbox, Google Drive
   - role: Content Writer
-    summary: Unique professional summary for Content Writer.
-    slug: writer
+    summary: Dynamic storyteller specializing in making complex topics easy-to-understand for a beginner audience. Comfortable connecting and communicating across cultures. Always seeking dynamic, diverse perspectives. Remote-only contractor for over 5 years.
     skills:
       - Topic Research
       - Keyword Research
       - Editing
+      - Technical Writing
+      - Blogging
+      - Social Media Scheduling
+      - On-Page Optimization
+      - Content Management Systems
+      - Team Coordination
+  - role: Content Producer
+    summary: Dynamic storyteller with a varied geographical and professional background. Comfortable connecting and communicating across cultures. Always seeking dynamic, diverse perspectives. Remote-only contractor for over 5 years.
+    skills:
+      - Adobe Creative Suite
+      - PowerPoint
+      - Buffer, Social Scheduling
+      - Airtable, Trello
+      - Live Streaming Tools
+      - Convertkit, Mailchimp

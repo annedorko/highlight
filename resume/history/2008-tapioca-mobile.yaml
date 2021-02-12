@@ -1,9 +1,10 @@
 ---
   include:
     - Front End Developer
+    - Front End Python Developer
+    - WordPress Developer
   titles:
-    default: Search Engine Marketer
-    Front End Developer: Web Developer
+    default: Web Developer
     Graphic Designer: In-House Graphic Designer
   company: Tapioca Mobile, Inc.
   location: San Diego, California, USA
@@ -30,4 +31,5 @@
       - Establish Design Goals
       - Team Communications
   descriptions:
-    default: Created and improved UX and UI in an Agile work environment. Front-end development with Ruby on Rails. Designed and managed our front-facing business website. Communicated with engineers and business development teams to establish design goals. Tested bugs for Quality Assurance. Identifyed keyword opportunities and website optimization.
+    default: Created and improved UX and UI in an Agile work environment. Front-end development with Ruby on Rails. Designed and managed our front-facing business website. Communicated with engineers and business development teams to establish design goals. Tested bugs for Quality Assurance. Identified keyword opportunities and website optimization.
+    WordPress Developer: Created and improved UX and UI in an Agile work environment. Managed front-end design and development. Communicated with engineers and business development teams to establish design goals. Tested bugs for Quality Assurance. Identified keyword opportunities and website optimization.
