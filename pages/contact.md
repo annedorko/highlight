@@ -3,6 +3,6 @@ anchor: Contact
 order: 2
 
 
-# Contact
+# Let’s Work Together
 
-You can reach me at anne@dorko.tv
+I am currently available for new contracts. Shoot me an email with your needs and let’s work something out: [anne@dorko.tv](mailto:anne@dorko.tv)
