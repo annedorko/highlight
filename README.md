@@ -153,7 +153,7 @@ Here is a blank template with a few required stand-ins if you’d like to start 
 1. Open `resume/roles.yaml`
 2. Edit the values to reflect your target roles.
 
-This document is the root of all your generated resumes. There is no limit to the number of target roles you can add, as long as you follow the YAML format!
+This document is the root of all your generated resumes. There is no limit to the number of target roles you can add, as long as you follow the YAML format! **Every role you add will generate a new resume page targeted towards that role.**
 
 Every role requires:
 
@@ -161,9 +161,30 @@ Every role requires:
 - Professional Summary
 - List of Essential Skills (Multiples of 3 work best)
 
-<p align="center"><img style="max-width: 250px; height: auto;" src="https://user-images.githubusercontent.com/1281008/107766163-5ca4dc80-6d33-11eb-9448-33310821f2f0.png" /></p>
+#### Preview Role Summary
+<p align="center"><img style="max-width: 250px; height: auto;" src="https://user-images.githubusercontent.com/1281008/107766163-5ca4dc80-6d33-11eb-9448-33310821f2f0.png" width="600" /></p>
 
-This information will appear at the top of your resume.
+This information will appear at the top of your resume, as shown above.
+
+#### role.yaml Template
+
+Here is a blank template with a few required stand-ins if you’d like to start from scratch. Feel free to cross-reference these values with the default role.yaml to better understand how to use them.
+
+```
+---
+  - role: Role Name
+    summary: Professional summary.
+    skills:
+      - Skill 1
+      - Skill 2
+      - Skill 3
+  - role: 2nd Role Name
+    summary: Professional summary.
+    skills:
+      - Skill 1
+      - Skill 2
+      - Skill 3
+```
 
 ### Step 5. Add Your Work History
 
