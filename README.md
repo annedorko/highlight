@@ -1,6 +1,8 @@
-# Highlight: a Static Site Generator
+<h1 align="center">Highlight: a Static Site Generator</h1>
 
-Highlight is a lightweight, opinionated Static Site Generator (SSG) for quickly creating a beautiful resume and portfolio site that targets multiple ideal roles.
+<p align="center">Highlight is a lightweight, opinionated Static Site Generator (SSG) for quickly creating a beautiful resume and portfolio site that targets multiple ideal roles.</p>
+
+![Highlight Site Preview](https://user-images.githubusercontent.com/1281008/107776426-d93eb780-6d41-11eb-85b9-c3954b4fe843.png)
 
 **Note:** This project is experimental. Use at your own risk!
 
@@ -31,9 +33,18 @@ The program may work on lower versions of Node or NPM.
 ### Installation
 
 1. Clone this repo into a clean project folder.
+  ```
+  git clone https://github.com/annedorko/highlight.git
+  ```
 2. Navigate into your project folder using the console.
-3. Install NPM packages using `npm install`
-4. Generate the site in the console using `python site.py`
+3. Install NPM packages
+  ```
+  npm install
+  ```
+4. Generate the site in the console.
+  ```
+  python site.py
+  ```
 5. Static site files are now available for local browsing in `site/`
 
 ## Usage
