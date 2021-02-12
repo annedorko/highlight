@@ -104,7 +104,7 @@ def load_history(role):
         # Process experience
         include = False
         if not experience is False:
-            includes = experience.get('include')[0]
+            includes = experience.get('include')
             look_for = ['All', role]
             if any(search in includes for search in look_for):
                 include = True
