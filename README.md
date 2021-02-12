@@ -35,13 +35,13 @@ The program may work on lower versions of Node or NPM.
 3. Generate the site in the console using `python site.py`
 4. Static site is now available for local browsing in `site/`
 
-### Usage
+## Usage
 
 This repo is full of example data. Currently, that data is my own resume information. You will want to use this as a reference to create your own site.
 
 Data in Highlights is managed through [YAML](https://yaml.org/refcard.html). If you receive errors it is likely because the YAML got mis-formatted. Be sure to follow the same indentations and patterns as provided in the example data!
 
-#### Step 1. Configure Site
+### Step 1. Configure Site
 
 1. Open `config.yaml`
 2. Change the `url` setting to the root domain your site will be published at.
@@ -50,15 +50,17 @@ This URL controls:
 - The root of your links throughout the site
 - The CNAME for Github Pages to support custom domains
 
-#### Step 2. Start Site for Local Editing
+_Note: Highlights automatically generates a .nojekyll file for Github Pages, as well._
+
+### Step 2. Start Site for Local Editing
 
 Open two console tabs and navigate to the project root in both.
 
-In the first, run `python site.py server` and navigate to [http://localhost:4242](http://localhost:4242) to preview your site live.
+**First,** run `python site.py server` and navigate to [http://localhost:4242](http://localhost:4242) to preview your site live.
 
-Once that is operational, run `python site.py watch` to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates` in the following steps.
+**Next,** run `python site.py watch` in the other tab to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates` in the following steps.
 
-#### Step 3. Update Your Bio
+### Step 3. Update Your Bio
 
 1. Open `resume/about.yaml`
 2. Edit the values to reflect your name, contact information, skills, and more.
@@ -73,20 +75,17 @@ This document is for the data that is the same across all your resume and portfo
 - Contact information
 - Education
 
-##### Skills
+#### Skills
 
-Categories can be written using alphanumeric values followed by a colon. If you need to include a colon in your category name, be sure to surround it with quotes. For example:
+Categories can be written using alphanumeric values followed by a colon. If you need to include a colon in your category name, be sure to surround it with quotes.
 
-Good:
-`Music Production:`
+For example:
 
-Good:
-`'Music: Production':`
+- Good: `Music Production:`
+- Good: `'Music: Production':`
+- Bad: `Music: Production:`
 
-Bad:
-`Music: Production:`
-
-##### Links
+#### Links
 
 Links can be plain text, like so:
 
@@ -109,7 +108,7 @@ Homepage:
   icon: '<i class="fas fa-home"></i>'
 ```
 
-##### Template
+#### about.yaml Template
 
 Here is a blank template with a few required stand-ins if you’d like to start from scratch:
 
@@ -147,19 +146,19 @@ education:
     graduation: ''
 ```
 
-#### Step 4. Add Your Target Roles
+### Step 4. Add Your Target Roles
 
 Modify target roles and professional summaries using `resume/roles.yaml`
 
-#### Step 5. Add Your Work History
+### Step 5. Add Your Work History
 
 Modify career history under `resume/history/`
 
-#### Step 6. Edit, Add, and Delete Site Pages
+### Step 6. Edit, Add, and Delete Site Pages
 
 Your site pages are managed in markdown files under `pages/`
 
-#### Step 7. Compile Your Website for Uploading
+### Step 7. Compile Your Website for Uploading
 
 Once you are satisfied with your site, use CTRL+C in the console to stop watching for changes in your site and close the server.
 
