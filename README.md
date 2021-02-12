@@ -22,7 +22,7 @@ If you use this project base, modify this project to suit your own resume and po
 
 Built using:
 
-- Python 3
+- Python 3 (Required)
 - Node.js 15+
 - NPM 7+
 
@@ -31,15 +31,16 @@ The program may work on lower versions of Node or NPM.
 ### Installation
 
 1. Clone this repo into a clean project folder.
-2. Install NPM packages using `npm install`
-3. Generate the site in the console using `python site.py`
-4. Static site is now available for local browsing in `site/`
+2. Navigate into your project folder using the console.
+3. Install NPM packages using `npm install`
+4. Generate the site in the console using `python site.py`
+5. Static site files are now available for local browsing in `site/`
 
 ## Usage
 
 This repo is full of example data. Currently, that data is my own resume information. You will want to use this as a reference to create your own site.
 
-Data in Highlights is managed through [YAML](https://yaml.org/refcard.html). If you receive errors it is likely because the YAML got mis-formatted. Be sure to follow the same indentations and patterns as provided in the example data!
+Data in Highlight is managed through [YAML](https://yaml.org/refcard.html). If you receive errors it is likely because the YAML got mis-formatted. Be sure to follow the same indentations and patterns as provided in the example data!
 
 ### Step 1. Configure Site
 
@@ -50,13 +51,13 @@ This URL controls:
 - The root of your links throughout the site
 - The CNAME for Github Pages to support custom domains
 
-_Note: Highlights automatically generates a .nojekyll file for Github Pages, as well._
+_Note: Highlight automatically generates a .nojekyll file for Github Pages, as well._
 
 ### Step 2. Start Site for Local Editing
 
 Open two console tabs and navigate to the project root in both.
 
-**First,** run `python site.py server` and navigate to [http://localhost:4242](http://localhost:4242) to preview your site live.
+**First,** run `python site.py server`. You can now navigate to [http://localhost:4242](http://localhost:4242) in your browser to preview your site live.
 
 **Next,** run `python site.py watch` in the other tab to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates` in the following steps.
 
@@ -149,7 +150,20 @@ Here is a blank template with a few required stand-ins if you’d like to start 
 
 ### Step 4. Add Your Target Roles
 
-Modify target roles and professional summaries using `resume/roles.yaml`
+1. Open `resume/roles.yaml`
+2. Edit the values to reflect your target roles.
+
+This document is the root of all your generated resumes. There is no limit to the number of target roles you can add, as long as you follow the YAML format!
+
+Every role requires:
+
+- Role/Title Name
+- Professional Summary
+- List of Essential Skills (Recommended 6-9)
+
+![Role Summary Preview](https://user-images.githubusercontent.com/1281008/107766163-5ca4dc80-6d33-11eb-9448-33310821f2f0.png)
+
+This information will appear at the top of your resume.
 
 ### Step 5. Add Your Work History
 
@@ -164,6 +178,10 @@ Your site pages are managed in markdown files under `pages/`
 Once you are satisfied with your site, use CTRL+C in the console to stop watching for changes in your site and close the server.
 
 Run `python site.py compile` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
+
+### Step 8: Print to PDF Using Chrome
+
+If you need PDF versions of your resume, as I do, there are special print CSS styles. Navigate to your live page and _Print to PDF_. I recommend using Chrome if you are experiencing any issues.
 
 ## Roadmap
 
