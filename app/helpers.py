@@ -39,6 +39,7 @@ def date_diff(older, newer):
             tStr = "yrs"
         str = str + "%s %s" % (math.floor(years), tStr)
         months = months - (math.floor(years) * 12)
+        months = 11 if months > 11 else months
         if months > 1:
             if months == 1:
                 tStr = "mo"
