@@ -9,26 +9,44 @@ from slugify import slugify
 from operator import itemgetter
 
 
-def date_diff(older, newer):
-    """
-    Returns a humanized string representing time difference
+def date_diff(then, now):
+    # Measure length of time spent at a job or on a project in years, months
+    # NOTE: The following methods look a little convoluted, as uneven months, leap years, etc. made long-term contract terms clearly incorrect
 
-    The output rounds up to days, hours, minutes, or seconds.
-    4 days 5 hours returns '4 days'
-    0 days 4 hours 3 minutes returns '4 hours', etc...
-    """
-
-    # Min-max month estimates
-    # Oldest month starts on the 1st
-    # Newest month starts on the 28th
-    timeDiff = newer.replace(day=28) - older.replace(day=1)
-    days = timeDiff.days
-    hours = timeDiff.seconds / 3600
-    minutes = timeDiff.seconds % 3600 / 60
-    seconds = timeDiff.seconds % 3600 % 60
-    months = timeDiff.days / 30
-    years = timeDiff.days / 365
-
+    # Set up standard datetime diff to work with
+    standard_diff = now - then
+    # Do math using years (i.e. 2020, 2019) if there is more than 365 days difference on the standard diff
+    years = now.year - then.year if standard_diff.days > 365 else 0
+    # If more than 1 year of time and the months aren't the same (i.e. Mar-Mar, Apr-Apr), crunch the difference in months
+    if years > 0 and then.month != now.month:
+        # Calculate months per year on the job, starting at 0
+        months = 0
+        # Add 1 to range end since range is exclusive of the final value
+        for i in range(then.year, now.year + 1):
+            if i == then.year:
+                # How many months of experience in the first year? December = 1 (i.e. 13-12=1), January = 12 (i.e. 13-1=12)
+                months += 13 - then.month
+                # print('months for', i, ':', (13 - then.month))
+            elif i == now.year:
+                # The number month works plainly
+                months += now.month
+            else:
+                # Each non starting and non ending year gets accounted for 12 months
+                months += 12
+        year_in_months = years * 12
+        # If we have fewer months than the number of months in the total years worked, we need to subtract a year and try again (this accounts for dates where the start/end months don't allow for full year calculations between years i.e. Starting in Dec 2018 and ending in Jan 2021 is not 3 years of experience since only one month is worked in both 2018 and 2021. The result is 2 years (2019, 2020) plus the two months)
+        if months < year_in_months:
+            years -= 1
+            year_in_months = years * 12
+        months = months - (years * 12)
+    elif then.month == now.month:
+        # Months match so the difference in months is zero
+        months = 0
+    else:
+        # If less than one year, it is accurate enough to divide by 30
+        # Always round up to match LinkedIn
+        month_diff = math.ceil(standard_diff.days / 30)
+        months = month_diff if month_diff < 12 else 11
     str = ""
     tStr = ""
     if years > 1:
@@ -38,14 +56,13 @@ def date_diff(older, newer):
         else:
             tStr = "yrs"
         str = str + "%s %s" % (math.floor(years), tStr)
-        months = months - (math.floor(years) * 12)
-        months = 11 if months > 11 else months
         if months > 1:
+            # print('MONTHS IS ', months)
             if months == 1:
                 tStr = "mo"
             else:
                 tStr = "mos"
-            str += " %s %s" % (math.ceil(months), tStr)
+            str += " %s %s" % (months, tStr)
         return str
     elif months > 1:
         if months == 1:
@@ -60,27 +77,6 @@ def date_diff(older, newer):
         else:
             tStr = "days"
         str = str + "%s %s" % (days, tStr)
-        return str
-    elif hours > 0:
-        if hours == 1:
-            tStr = "hour"
-        else:
-            tStr = "hours"
-        str = str + "%s %s" % (hours, tStr)
-        return str
-    elif minutes > 0:
-        if minutes == 1:
-            tStr = "min"
-        else:
-            tStr = "mins"
-        str = str + "%s %s" % (minutes, tStr)
-        return str
-    elif seconds > 0:
-        if seconds == 1:
-            tStr = "sec"
-        else:
-            tStr = "secs"
-        str = str + "%s %s" % (seconds, tStr)
         return str
     else:
         return None
@@ -122,6 +118,7 @@ def load_history(role):
             # descriptions: default, Role
             title = experience.get('titles')[role] if role in experience.get(
                 'titles') else experience.get('titles')['default']
+            # print('MATH FOR JOB TITLE', title)
             base_skills = experience.get('skills')['base']
             special_skills = experience.get('skills')[role] if role in experience.get(
                 'skills') else experience.get('skills')['default']
