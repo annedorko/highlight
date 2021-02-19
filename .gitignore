@@ -282,5 +282,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Custom
-requirements.txt
+# Jetbrains stuff
+.idea
