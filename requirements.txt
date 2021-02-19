@@ -1,0 +1,8 @@
+jinja2
+markdown
+markupsafe
+pyyaml
+six
+unicode-slugify
+unidecode
+watchdog
