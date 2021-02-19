@@ -9,6 +9,9 @@ from app.helpers import tailwind_os
 
 site = get_global()
 
+if not os.path.exists('site'):
+    os.mkdir('site')
+
 # Set global variables, prepare compile
 if 'compile' in sys.argv:
     site = get_global(compile=True)
