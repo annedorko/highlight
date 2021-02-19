@@ -55,7 +55,7 @@ The program may work on lower versions of Node or NPM.
   ```
 5. Generate the site in the console.
   ```
-  python site.py
+  python main.py
   ```
 6. Static site files are now available for local browsing in `site/`
 
