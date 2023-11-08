@@ -57,7 +57,7 @@ The program may work on lower versions of Node or NPM.
   ```
   python main.py
   ```
-6. Static site files are now available for local browsing in `site/`
+5. Static site files are now available for local browsing in `site/`
 
 ## Usage
 
