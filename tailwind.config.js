@@ -1,20 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-  },
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {
-      screens: {
-        'print': {'raw': 'print'},
-      }
+    content: ['site/**/*.html', 'templates/**/*.html', 'pages/**/*.md'],
+    theme: {
+        extend: {
+            screens: {
+                print: { raw: 'print' },
+            },
+        },
     },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-    require('@tailwindcss/typography'),
-  ],
-}
+    plugins: [],
+};

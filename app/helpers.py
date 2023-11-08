@@ -222,7 +222,9 @@ def load_pages():
 
 
 def tailwind_os(status=''):
-    tailwind = 'npx tailwind build ./assets/css/styles.css -o site/assets/css/styles.css'
+    tailwind = 'npx tailwindcss -i ./assets/css/styles.css -o ./site/assets/css/styles.css'
+    if status  == 'server':
+        tailwind += tailwind + ' --watch'
     if status == 'compile':
         tailwind += ' -c tailwind.prod.config.js'
     return tailwind

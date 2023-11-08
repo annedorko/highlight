@@ -80,9 +80,9 @@ _Note: Highlight automatically generates a .nojekyll file for Github Pages, as w
 
 Open two console tabs and navigate to the project root in both.
 
-**First,** run `python site.py server`. You can now navigate to [http://localhost:4242](http://localhost:4242) in your browser to preview your site live.
+**First,** run `python main.py server`. You can now navigate to [http://localhost:4242](http://localhost:4242) in your browser to preview your site live.
 
-**Next,** run `python site.py watch` in the other tab to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates` in the following steps.
+**Next,** run `python main.py watch` in the other tab to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates` in the following steps.
 
 ### Step 3. Update Your Bio
 
@@ -323,7 +323,7 @@ If you are running the server and watch commands, you will have been able to ref
 
 Once you are satisfied with your site, use CTRL+C in the console to stop watching for changes in your site and close the server.
 
-Run `python site.py compile` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
+Run `python main.py compile` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
 
 ### Step 8: Print to PDF Using Chrome
 
