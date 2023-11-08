@@ -41,11 +41,23 @@ The program may work on lower versions of Node or NPM.
   ```
   npm install
   ```
-4. Generate the site in the console.
+4. Install Python requirements
+  ```shell
+  pip install -r requirements.txt  
   ```
-  python site.py
+  ...or...
+  ```shell
+  pipenv install  
   ```
-5. Static site files are now available for local browsing in `site/`
+  ...or...
+  ```shell
+  conda install --file requirements.txt
+  ```
+5. Generate the site in the console.
+  ```
+  python main.py
+  ```
+6. Static site files are now available for local browsing in `site/`
 
 ## Usage
 
