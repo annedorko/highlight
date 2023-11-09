@@ -6,89 +6,23 @@ import yaml
 import datetime
 import math
 from slugify import slugify
-from operator import itemgetter
 
-
-def date_diff(then, now):
-    # Measure length of time spent at a job or on a project in years, months
-    # NOTE: The following methods look a little convoluted, as uneven months, leap years, etc. made long-term contract terms clearly incorrect
-
-    # Set up standard datetime diff to work with
-    standard_diff = now - then
-    # Do math using years (i.e. 2020, 2019) if there is more than 365 days difference on the standard diff
-    years = now.year - then.year if standard_diff.days > 365 else 0
-    # If more than 1 year of time and the months aren't the same (i.e. Mar-Mar, Apr-Apr), crunch the difference in months
-    if years > 0 and then.month != now.month:
-        # Calculate months per year on the job, starting at 0
-        months = 0
-        # Add 1 to range end since range is exclusive of the final value
-        for i in range(then.year, now.year + 1):
-            if i == then.year:
-                # How many months of experience in the first year? December = 1 (i.e. 13-12=1), January = 12 (i.e. 13-1=12)
-                months += 13 - then.month
-                # print('months for', i, ':', (13 - then.month))
-            elif i == now.year:
-                # The number month works plainly
-                months += now.month
-            else:
-                # Each non starting and non ending year gets accounted for 12 months
-                months += 12
-        year_in_months = years * 12
-        # If we have fewer months than the number of months in the total years worked, we need to subtract a year and try again (this accounts for dates where the start/end months don't allow for full year calculations between years i.e. Starting in Dec 2018 and ending in Jan 2021 is not 3 years of experience since only one month is worked in both 2018 and 2021. The result is 2 years (2019, 2020) plus the two months)
-        if months < year_in_months:
-            years -= 1
-            year_in_months = years * 12
-        months = months - (years * 12)
-    elif then.month == now.month:
-        # Months match so the difference in months is zero
-        months = 0
-    else:
-        # If less than one year, it is accurate enough to divide by 30
-        # Always round up to match LinkedIn
-        month_diff = math.ceil(standard_diff.days / 30)
-        months = month_diff if month_diff < 12 else 11
-    str = ""
-    tStr = ""
-    if years > 1:
-        # Check years
-        if years == 1:
-            tStr = "yr"
-        else:
-            tStr = "yrs"
-        str = str + "%s %s" % (math.floor(years), tStr)
-        if months > 1:
-            # print('MONTHS IS ', months)
-            if months == 1:
-                tStr = "mo"
-            else:
-                tStr = "mos"
-            str += " %s %s" % (months, tStr)
-        return str
-    elif months > 1:
-        if months == 1:
-            tStr = "mo"
-        else:
-            tStr = "mos"
-        str = str + "%s %s" % (round(months), tStr)
-        return str
-    elif days > 0:
-        if days == 1:
-            tStr = "day"
-        else:
-            tStr = "days"
-        str = str + "%s %s" % (days, tStr)
-        return str
-    else:
-        return None
-
+def watch_paths():
+    paths = [
+        'src/pages',
+        'src/resume',
+        'src/templates',
+        'src/assets/css',
+    ]
+    return paths
 
 def load_history(role):
     PAST = {}
     CURRENT = {}
     # Set file names
     LIST = {}
-    for page in os.listdir('resume/history'):
-        LIST[page] = os.path.join('resume/history', page)
+    for page in os.listdir('src/resume/history'):
+        LIST[page] = os.path.join('src/resume/history', page)
     # Read YAML from each file
     for item in LIST:
         # Load experience
@@ -183,7 +117,7 @@ def load_history(role):
 
 def load_roles():
     ROLES = {}
-    with open("resume/roles.yaml", 'r') as stream:
+    with open("src/resume/roles.yaml", 'r') as stream:
         try:
             find = yaml.safe_load(stream)
             # Turn list into dictionary
@@ -198,8 +132,8 @@ def load_roles():
 
 def load_pages():
     PAGES = {}
-    for page in os.listdir('pages'):
-        file_path = os.path.join('pages', page)
+    for page in os.listdir('src/pages'):
+        file_path = os.path.join('src/pages', page)
 
         with open(file_path, 'r') as file:
             md = markdown.Markdown(extensions=['meta'])
@@ -222,12 +156,8 @@ def load_pages():
 
 
 def tailwind_os(status=''):
-    tailwind = 'npx tailwindcss -i ./assets/css/styles.css -o ./site/assets/css/styles.css'
-    if status  == 'server':
-        tailwind += tailwind + ' --watch'
-    if status == 'compile':
-        tailwind += ' -c tailwind.prod.config.js'
-    return tailwind
+    postcss = 'npx postcss ./assets/css/styles.css -o ./site/assets/css/styles.css'
+    return postcss
 
 
 def set_gravatar(email, default, size):
@@ -241,3 +171,75 @@ def set_gravatar(email, default, size):
             's': str(size)
         })
     return gravatar_url
+
+def date_diff(then, now):
+    # Measure length of time spent at a job or on a project in years, months
+    # NOTE: The following methods look a little convoluted, as uneven months, leap years, etc. made long-term contract terms clearly incorrect
+
+    # Set up standard datetime diff to work with
+    standard_diff = now - then
+    # Do math using years (i.e. 2020, 2019) if there is more than 365 days difference on the standard diff
+    years = now.year - then.year if standard_diff.days > 365 else 0
+    # If more than 1 year of time and the months aren't the same (i.e. Mar-Mar, Apr-Apr), crunch the difference in months
+    if years > 0 and then.month != now.month:
+        # Calculate months per year on the job, starting at 0
+        months = 0
+        # Add 1 to range end since range is exclusive of the final value
+        for i in range(then.year, now.year + 1):
+            if i == then.year:
+                # How many months of experience in the first year? December = 1 (i.e. 13-12=1), January = 12 (i.e. 13-1=12)
+                months += 13 - then.month
+                # print('months for', i, ':', (13 - then.month))
+            elif i == now.year:
+                # The number month works plainly
+                months += now.month
+            else:
+                # Each non starting and non ending year gets accounted for 12 months
+                months += 12
+        year_in_months = years * 12
+        # If we have fewer months than the number of months in the total years worked, we need to subtract a year and try again (this accounts for dates where the start/end months don't allow for full year calculations between years i.e. Starting in Dec 2018 and ending in Jan 2021 is not 3 years of experience since only one month is worked in both 2018 and 2021. The result is 2 years (2019, 2020) plus the two months)
+        if months < year_in_months:
+            years -= 1
+            year_in_months = years * 12
+        months = months - (years * 12)
+    elif then.month == now.month:
+        # Months match so the difference in months is zero
+        months = 0
+    else:
+        # If less than one year, it is accurate enough to divide by 30
+        # Always round up to match LinkedIn
+        month_diff = math.ceil(standard_diff.days / 30)
+        months = month_diff if month_diff < 12 else 11
+    str = ""
+    tStr = ""
+    if years > 1:
+        # Check years
+        if years == 1:
+            tStr = "yr"
+        else:
+            tStr = "yrs"
+        str = str + "%s %s" % (math.floor(years), tStr)
+        if months > 1:
+            # print('MONTHS IS ', months)
+            if months == 1:
+                tStr = "mo"
+            else:
+                tStr = "mos"
+            str += " %s %s" % (months, tStr)
+        return str
+    elif months > 1:
+        if months == 1:
+            tStr = "mo"
+        else:
+            tStr = "mos"
+        str = str + "%s %s" % (round(months), tStr)
+        return str
+    elif days > 0:
+        if days == 1:
+            tStr = "day"
+        else:
+            tStr = "days"
+        str = str + "%s %s" % (days, tStr)
+        return str
+    else:
+        return None

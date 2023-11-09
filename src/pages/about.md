@@ -1,7 +1,7 @@
 title: About
 order: 0
 
-# What I Do
+# What I Do!
 
 I help people with big visions find the right steps to make them happen through research, planning, automation, and optimization.
 

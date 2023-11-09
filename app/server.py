@@ -1,10 +1,8 @@
 import os
-import http.server
 import socketserver
-from http.server import SimpleHTTPRequestHandler, BaseHTTPRequestHandler, HTTPServer
+from http.server import SimpleHTTPRequestHandler
 
-
-class SetDirectory(http.server.SimpleHTTPRequestHandler):
+class SetDirectory(SimpleHTTPRequestHandler):
     def do_GET(self):
         # Serve from site/ directory
         self.path = 'site/' + self.path
@@ -18,10 +16,33 @@ class SetDirectory(http.server.SimpleHTTPRequestHandler):
         super().do_GET()
 
 
-def run(server_class=HTTPServer, handler_class=SetDirectory):
-    server_address = ('', 4242)
-    httpd = server_class(server_address, handler_class)
-    try:
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        pass
+class HighlightServer:
+    def __init__(self):
+        self.data = {}
+        self.data['httpd'] = None
+
+    def httpd(self):
+        return self.data['httpd']
+
+    def run(self):
+        handler = SetDirectory
+        
+        with socketserver.TCPServer(("localhost", 4242), handler) as httpd:
+            self.data['httpd'] = httpd
+            print("Serving at port 4242...")
+            print('\n')
+            print('http://localhost:4242')
+            print('--------')
+            httpd.serve_forever()
+
+            try:
+                # Serve forever until Ctrl+C is pressed
+                httpd.serve_forever()
+            except KeyboardInterrupt:
+                # Handle Ctrl+C to ensure proper cleanup
+                print("Server shutting down...")
+            finally:
+                # Close the server
+                httpd.server_close()
+
+        

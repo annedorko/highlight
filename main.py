@@ -1,35 +1,58 @@
-# Tutorial
-# https://blog.naveeraashraf.com/posts/make-static-site-generator-with-python-2/
-import os
+'''
+Highlight v 0.1.0
+
+Featuring a completely reworked server engine.
+
+Breaking changes:
+- Remove compile command, switch to build
+- Modernized TailwindCSS
+
+Features:
+- package.json scripts (requires python3 as a valid command line prompt)
+- Local fonts (Github's Mona and Hubot)
+- Reworked server and watch engine
+
+CREDITS
+Core server based on: https://blog.naveeraashraf.com/posts/make-static-site-generator-with-python-2/
+'''
 import sys
-from app.load import get_global
-from app.write import generate_site
-from app.server import run
-from app.helpers import tailwind_os
+import signal
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+from app.build import GenerateSite
+from app.server import HighlightServer
+from app.watch import signal_handler
+from app.helpers import watch_paths
 
-site = get_global()
+site = GenerateSite(compile=True)
 
-if not os.path.exists('site'):
-    os.mkdir('site')
+if 'build' in sys.argv:
+    exit()
 
-# Set global variables, prepare compile
-if 'compile' in sys.argv:
-    site = get_global(compile=True)
-    generate_site(site)
-    os.system(tailwind_os('compile'))
-elif 'dev' in sys.argv:
-    # Generate HTML site
-    generate_site(site, False)
-elif not 'server' in sys.argv:
-    # Generate HTML site
-    generate_site(site)
-    os.system(tailwind_os())
+print('Initial site built')
 
-# Run dev server with full Tailwind CSS
-if 'server' in sys.argv:
-    os.system(tailwind_os())
-    run()
+# Watchdog event handler
+class WatchSiteFiles(FileSystemEventHandler):
+    def on_modified(self, event):
+        if event.is_directory:
+            return
+        site.dispatch(event)
 
-# Watch for changes
-if 'watch' in sys.argv:
-    exec(open("./app/watch.py").read())
+if __name__ == '__main__':
+    observer = None
+    if '--watch' in sys.argv:
+        # Set up Watchdog
+        event_handler = WatchSiteFiles()
+        observer = Observer()
+
+        for path in watch_paths():
+            observer.schedule(event_handler, path, recursive=True)
+        
+        observer.start()
+
+    # Set up HTTP server
+    server = HighlightServer()
+
+    # Set up signal handling to manage server quit
+    signal.signal(signal.SIGINT, lambda sig, frame: signal_handler(sig, frame, server, observer))
+    server.run()

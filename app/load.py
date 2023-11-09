@@ -1,20 +1,18 @@
-import os
-from yaml import load, dump
+from yaml import load
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
 except ImportError:
     from yaml import Loader, Dumper
 from app.helpers import set_gravatar, load_pages, load_roles
 
-
 def get_global(compile=False):
     # Get person information
-    with open('resume/about.yaml', 'r') as about_file:
+    with open('src/resume/about.yaml', 'r') as about_file:
         about = load(about_file, Loader=Loader)
     # Get Gravatar image
     about['gravatar'] = set_gravatar(
         about['contact']['email'],
-        'assets/media/avatar.jpg',
+        'src/assets/media/avatar.jpg',
         250)
     # Clean links
     if 'links' in about:

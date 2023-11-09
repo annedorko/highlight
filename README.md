@@ -32,32 +32,76 @@ The program may work on lower versions of Node or NPM.
 
 ### Installation
 
-1. Clone this repo into a clean project folder.
+#### 1. Clone this repo into a clean project folder.
   ```
   git clone https://github.com/annedorko/highlight.git
   ```
-2. Navigate into your project folder using the console.
-3. Install NPM packages
-  ```
-  npm install
-  ```
-4. Install Python requirements
-  ```shell
-  pip install -r requirements.txt  
-  ```
-  ...or...
-  ```shell
-  pipenv install  
-  ```
-  ...or...
-  ```shell
-  conda install --file requirements.txt
-  ```
-5. Generate the site in the console.
-  ```
-  python main.py
-  ```
-6. Static site files are now available for local browsing in `site/`
+#### 2. Navigate into your project folder using the console.
+
+```
+cd highlight
+```
+
+#### 3. Install NPM packages.
+```
+npm install
+```
+
+#### 4. Install Python package requirements.
+
+You can use pip, pipenv, or conda to install the requirements:
+
+##### pip
+
+```shell
+pip install -r requirements.txt
+```
+##### pipenv
+```shell
+pipenv install  
+```
+##### conda
+```shell
+conda install --file requirements.txt
+```
+
+#### 4. Generate the site.
+
+You can use the provided npm commands to build, develop, or serve your files, or run it manually. The npm commands expect `python3` to be available in the console.
+
+You can build, develop, or simply run the server.
+
+1. **Build:** Generate your site under the site/ folder.
+2. **Develop:** Generate your site under the site/ folder, serve them at http://localhost:4242, and watch for changes in the src/ folder to regenerate the site.
+3. **Serve:** Generate your site under the site/ folder and serve them at http://localhost:4242, without watching for changes to regenerate the site.
+
+##### npm
+
+```
+npm run build
+```
+```
+npm run develop
+```
+```
+npm run server
+```
+
+##### python3
+
+```
+python3 main.py build
+```
+
+```
+python3 main.py server --watch
+```
+
+```
+python3 main.py server
+```
+
+If you are running Python3 under a different command line alias, you can adjust these accordingly.
 
 ## Usage
 
@@ -74,19 +118,19 @@ This URL controls:
 - The root of your links throughout the site
 - The CNAME for Github Pages to support custom domains
 
-_Note: Highlight automatically generates a .nojekyll file for Github Pages, as well._
+_Note: Highlight automatically generates a .nojekyll file to support Github Pages, as well._
 
 ### Step 2. Start Site for Local Editing
 
 Open two console tabs and navigate to the project root in both.
 
-**First,** run `python main.py server`. You can now navigate to [http://localhost:4242](http://localhost:4242) in your browser to preview your site live.
+**First,** run `python3 main.py server --watch`. You can now navigate to [http://localhost:4242](http://localhost:4242) in your browser to preview your site live.
 
-**Next,** run `python main.py watch` in the other tab to regenerate the site automatically as you make changes to `/pages`, `/resume`, and `/templates` in the following steps.
+**Next,** run `python3 main.py watch` in the other tab to regenerate the site automatically as you make changes to anything under the `src/` folder, such as `src/pages`, `src/resume`, and `src/templates` in the following steps.
 
 ### Step 3. Update Your Bio
 
-1. Open `resume/about.yaml`
+1. Open `src/resume/about.yaml`
 2. Edit the values to reflect your name, contact information, skills, and more.
 
 This document is for the data that is the same across all your resume and portfolio items.
@@ -175,7 +219,7 @@ Here is a blank template with a few required stand-ins if you’d like to start 
 
 ### Step 4. Add Your Target Roles
 
-1. Open `resume/roles.yaml`
+1. Open `src/resume/roles.yaml`
 2. Edit the values to reflect your target roles.
 
 This document is the root of all your generated resumes. There is no limit to the number of target roles you can add, as long as you follow the YAML format! **Every role you add will generate a new resume page targeted towards that role.**
@@ -213,7 +257,7 @@ Here is a blank template with a few required stand-ins if you’d like to start 
 
 ### Step 5. Add Your Work History
 
-Without adding any career history, your generated resumes will look a bit empty. You will need to add work history to your `resume/history/` folder.
+Without adding any career history, your generated resumes will look a bit empty. You will need to add work history to your `src/resume/history/` folder.
 
 Each file represents a single element that will show up on your resumes. You will need to add a new file per work history item.
 
@@ -307,7 +351,7 @@ Here is a blank template with a few required stand-ins if you’d like to start 
 
 Finally, you will need to adjust your site pages! You can add as many or few pages as you’d like. These will be linked to at the top of your site in the navigation bar. These will be useful if you plan to send the web versions of your resumes to people.
 
-Your site pages are managed in markdown files under `pages/`. Here is an [introduction to markdown](https://www.markdownguide.org/getting-started/) if you are not familiar with it.
+Your site pages are managed in markdown files under `src/pages/`. Here is an [introduction to markdown](https://www.markdownguide.org/getting-started/) if you are not familiar with it.
 
 Since your homepage is generated automatically based on the `about.yaml` and `roles.yaml` files, do not create an `index.md` page. Otherwise, you can create whatever pages you like.
 
@@ -323,7 +367,7 @@ If you are running the server and watch commands, you will have been able to ref
 
 Once you are satisfied with your site, use CTRL+C in the console to stop watching for changes in your site and close the server.
 
-Run `python main.py compile` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
+Run `python main.py build` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
 
 ### Step 8: Print to PDF Using Chrome
 
