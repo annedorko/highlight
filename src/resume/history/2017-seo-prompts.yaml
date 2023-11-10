@@ -1,21 +1,20 @@
 ---
-  include:
-    - Content Writer
-  titles:
+include:
+    - None
+titles:
     default: Creator
-    Content Writer: Creator, Content Writer
-  company: SEO Prompts
-  location: Remote
-  url: https://seoprompts.com
-  type: Project
-  dates:
+company: SEO Prompts
+location: Remote
+url: https://seoprompts.com
+type: Project
+dates:
     start: 2017-07
     end: 2018-03
-  skills:
+skills:
     base:
-      - SEO
+        - SEO
     default:
-      - PHP
-  descriptions:
+        - PHP
+descriptions:
     default: Identified significant gaps in the SEO market and created a solution to help DIY website owners take simple steps to maximize exposure and increase online traffic for qualified customers. Content and brand is managed by WooRank as of March 2018.
     Content Writer: Identified significant gaps in the SEO market. Write educational materials to help DIY website owners learn SEO. Content and brand is managed by WooRank as of March 2018.

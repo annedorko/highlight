@@ -1,22 +1,20 @@
 ---
-  include:
-    - Business Analyst
-    - Front End Developer
-    - Front End Python Developer
-    - WordPress Developer
-  titles:
+include:
+    - All
+titles:
     default: Software Engineer
-  company: WebAssist
-  location: San Diego, California, USA
-  url: https://www.webassist.com/
-  type: Full-time
-  dates:
+    Graphic Designer: Web Template Designer
+company: WebAssist
+location: San Diego, California, USA
+url: https://www.webassist.com/
+type: Full-time
+dates:
     start: 2011-02
     end: 2011-11
-  skills:
+skills:
     base:
-      - PHP
+        - PHP
     default:
-      - Photoshop
-  descriptions:
+        - Photoshop
+descriptions:
     default: Identified client needs for custom web development projects. Identified internal needs and developed custom PHP scripts to improve product performance. Identified and designed necessary graphics for internal communications and external marketing.

@@ -1,27 +1,22 @@
 ---
-  include:
-    - Content Producer
-    - Front End Python Developer
-    - Front End Developer
-    - WordPress Developer
-    - Content Writer
-  titles:
+include:
+    - All
+exclude:
+    - Graphic Designer
+titles:
     default: WordPress Tutorial Writer
-    Content Producer: Educational Content Writer
-    Front End Python Developer: Technical Tutorial Writer
-    Content Writer: Content Writer
-  company: WordCandy
-  location: Remote
-  url: https://wordcandy.co/
-  type: Freelance
-  dates:
+company: WordCandy
+location: Remote
+url: https://wordcandy.co/
+type: Freelance
+dates:
     start: 2015-11
     end: 2018-01
-  skills:
+skills:
     base:
-      - Writing
+        - Writing
     default:
-      - SEO
-  descriptions:
+        - SEO
+descriptions:
     default: Ghost-writer for technical articles focusing on teaching nontechnical readers how to work with WordPress.
     Business Analyst: Researched keyword opportunities for content marketing material. Wrote keyword optimized articles and tutorials on technical topics for non-technical consumers. Sourced and optimized media to improve reader experience.

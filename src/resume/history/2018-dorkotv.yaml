@@ -1,28 +1,22 @@
 ---
-  include:
-    - Content Producer
-    - Front End Python Developer
-    - Front End Developer
-    - WordPress Developer
-    - Content Writer
-  titles:
+include:
+    - All
+titles:
     default: Creator
-    Content Producer: Live Content Creator & Online Community Leader
-    Content Writer: Live Content Creator, Copywriter
-  company: Dorko.tv
-  location: Remote
-  url: https://dorko.tv
-  type: Project
-  dates:
+company: Dorko.tv
+location: Remote
+url: https://dorko.tv
+type: Project
+dates:
     start: 2018-04
     end: Present
-  skills:
+skills:
     base:
-      - Leadership
-      - Community Management
+        - Leadership
+        - Community Management
     default:
-      - Music Production
-  descriptions:
+        - Music Production
+descriptions:
     default: Entertainment platform for mental health advocacy through music, research-led conversation, and uplifting community spaces. Weekly live content planning and delivery. Creating and maintaining a custom self-hosted crowdfunding platform, including custom analytics solutions.
     Content Writer: Entertainment platform for mental health advocacy through music, research-led conversation, and uplifting community spaces. Weekly live content planning and delivery. Creating and maintaining a custom self-hosted crowdfunding platform, including regular written content.
     Content Producer: Managing content planning, audio, and visuals for a self-run live-streaming production. Voluntary team leader of several international community networks, helping conceptualize, coordinate, and run special events and manage interpersonal conflicts. Leader responsibilities include bi-weekly leader meetings, individual outreach, and team-wide mass communications and email list management.

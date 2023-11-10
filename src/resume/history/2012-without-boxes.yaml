@@ -1,20 +1,19 @@
 ---
-  include:
-    - Business Analyst
-  titles:
+include:
+    - None
+titles:
     default: Founder
-  company: Without Boxes
-  location: Remote
-  url: https://www.withoutboxes.com/
-  type: Project
-  dates:
+company: Without Boxes
+location: Remote
+url: https://www.withoutboxes.com/
+type: Project
+dates:
     start: 2012-05
     end: 2019-08
-  skills:
+skills:
     base:
-      - Writing
+        - Writing
     default:
-      - Podcast Production
-  descriptions:
-    default: 'Coordinate and produce a seasonal interview podcast with a co-founder: Locating interview candidates, preparing discovery questions, writing unique interviews, writing summaries, and publishing final episodes. Website design, management, and optimization. SEO updates for evergreen content.'
-    Business Analyst: 'Coordinate and produce a seasonal interview podcast with a co-founder: Locating interview candidates, preparing discovery questions, writing unique interviews, writing summaries, and publishing final episodes.'
+        - Podcast Production
+descriptions:
+    default: "Coordinate and produce a seasonal interview podcast with a co-founder: Locating interview candidates, preparing discovery questions, writing unique interviews, writing summaries, and publishing final episodes. Website design, management, and optimization. SEO updates for evergreen content."

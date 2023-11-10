@@ -7,15 +7,6 @@ open:
     seeking: Freelance & Contract
     location: Remote
 skills:
-    Musical Artist:
-        - skill: Violin, guitar, keyboard
-          years: 15
-        - skill: Chorus and theater
-          years: 10
-        - skill: Songwriting
-          years: 7
-        - skill: Music production
-          years: 2
     Web & Marketing:
         - skill: Web design
           years: 15
@@ -36,25 +27,16 @@ skills:
           years: 15
         - skill: Podcast production
           years: 3
-        - skill: Live streaming
-          years: 3
-    Teaching:
-        - skill: Curriculum development
-          years: 2
-        - skill: College instructor
-          years: 1
-        - skill: Online course design
-          years: 2
 links:
     Homepage:
-        url: https://www.dorko.dev
-        text: dorko.dev
+        url: https://www.example.com
+        text: example.com
     LinkedIn:
         url: https://www.linkedin.com/in/annedorko
         text: "LinkedIn"
         icon: '<i class="fab fa-linkedin"></i>'
 contact:
-    email: anne@dorko.tv
+    email: you@example.com
     phone: +1 555 321 5432
     timezone: CET/CEST
     github: annedorko
