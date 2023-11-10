@@ -4,17 +4,24 @@
 
 ![Highlight Site Preview](https://user-images.githubusercontent.com/1281008/107776426-d93eb780-6d41-11eb-85b9-c3954b4fe843.png)
 
-**Note:** This project is experimental. Use at your own risk!
+[Demo](https://highlight.dorko.dev/) | [Live Usage](https://hire.annedorko.com)
+
+If you are using Highlight and wish to be featured, please [contact me](https://github.com/annedorko/highlight#contact).
+
+**Note:** <mark>This project is experimental.</mark> Updates may introduce breaking changes. [Please follow these instructions for upgrading your Highlight installation.](https://github.com/annedorko/highlight/wiki/Updating-Highlight-Versions) Keep backups of your data and implement Highlight at your own risk!
 
 ## Who is it for?
 
-Highlight is built by and for generalists, who often need tweaked versions of their resume and portfolio to be appealing for different opportunities. This SSG is built to help you _highlight_ the right parts of your diverse skillset and experiences to the right people, quickly and elegantly.
+Highlight is built by and for generalists who often need tweaked versions of their resume and portfolio to be appealing for different opportunities. This SSG is built to help you _highlight_ the right parts of your diverse skill-set and experiences to the right people, quickly and elegantly.
 
-Because the output is a static site, you can host your resume and portfolio from nearly anywhere. Free static site hosting is available with [GitHub Pages](https://pages.github.com/). View the demo portfolio hosted at [GitHub Pages here](https://hire.annedorko.com).
+Highlight is a Static Site Generator, which means the output can be hosted anywhere as plain HTML and CSS. By default it is configured to deploy to Github Pages automatically.
+
+This repo uses dummy data (which still features much of my own resume) and the results of the auto-deployment through Github Pages can be viewed here: [Highlight Demo Site](https://highlight.dorko.dev).
 
 ## Built With
 
 - [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
+- [Jinja](https://palletsprojects.com/p/jinja/)
 
 ## Getting Started
 
@@ -25,115 +32,90 @@ If you use this project base, modify this project to suit your own resume and po
 Built using:
 
 - Python 3 (Required)
-- Node.js 15+
-- NPM 7+
+- Node.js 21+
+- NPM 10+
 
-The program may work on lower versions of Node or NPM.
+The program may work on lower versions of Node or NPM but has not been thoroughly tested.
 
 ### Installation
 
+Please [check the wiki](https://github.com/annedorko/highlight/wiki/Installation/) for more detailed installation instructions.
+
 #### 1. Clone this repo into a clean project folder.
-  ```
-  git clone https://github.com/annedorko/highlight.git
-  ```
+```shell
+git clone https://github.com/annedorko/highlight.git
+```
+
+Alternatively, you can [create a new project using Highlight as a Template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) and checkout your new project before proceeding.
+
 #### 2. Navigate into your project folder using the console.
 
-```
+```shell
 cd highlight
 ```
 
 #### 3. Install NPM packages.
-```
+```shell
 npm install
 ```
 
 #### 4. Install Python package requirements.
 
-You can use pip, pipenv, or conda to install the requirements:
-
-##### pip
+Depending on your preference, you can use pip, pipenv, or conda to install the requirements using the convenient npm scripts provided:
 
 ```shell
-pip install -r requirements.txt
+npm run install-pip
 ```
-##### pipenv
 ```shell
-pipenv install  
+npm run install-pipenv
 ```
-##### conda
 ```shell
-conda install --file requirements.txt
+npm run install-conda
 ```
 
-#### 4. Generate the site.
+#### 4. Get started!
 
-You can use the provided npm commands to build, develop, or serve your files, or run it manually. The npm commands expect `python3` to be available in the console.
+Get started developing! The following command will use `python3` to execute the start-up script which generates your Highlight site, watches for changes, and makes them available in the browser at http://localhost:4242
 
-You can build, develop, or simply run the server.
-
-1. **Build:** Generate your site under the site/ folder.
-2. **Develop:** Generate your site under the site/ folder, serve them at http://localhost:4242, and watch for changes in the src/ folder to regenerate the site.
-3. **Serve:** Generate your site under the site/ folder and serve them at http://localhost:4242, without watching for changes to regenerate the site.
-
-##### npm
-
-```
-npm run build
-```
-```
+```shell
 npm run develop
 ```
-```
-npm run server
-```
 
-##### python3
-
-```
-python3 main.py build
-```
-
-```
-python3 main.py server --watch
-```
-
-```
-python3 main.py server
-```
-
-If you are running Python3 under a different command line alias, you can adjust these accordingly.
+Learn more about [available scripts in the wiki](https://github.com/annedorko/highlight/wiki/Installation/).
 
 ## Usage
 
-This repo is full of example data. Currently, that data is my own resume information. You will want to use this as a reference to create your own site.
+This repo is full of example data. Currently, that data is mostly from my own resume. You can use it as a reference to create your own site.
 
 Data in Highlight is managed through [YAML](https://yaml.org/refcard.html). If you receive errors it is likely because the YAML got mis-formatted. Be sure to follow the same indentations and patterns as provided in the example data!
 
+As Highlight is so young, the YAML formatting may slightly change from update to update without backward compatibility, so be sure to check for any special notes before updating to use new Highlight features.
+
 ### Step 1. Configure Site
 
-1. Open `config.yaml`
+1. Open `src/config.yaml`
 2. Change the `url` setting to the root domain your site will be published at.
 
 This URL controls:
 - The root of your links throughout the site
 - The CNAME for Github Pages to support custom domains
 
-_Note: Highlight automatically generates a .nojekyll file to support Github Pages, as well._
+Note: Highlight automatically generates a [.nojekyll file](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/) to support Github Page deployment.
 
 ### Step 2. Start Site for Local Editing
 
-Open two console tabs and navigate to the project root in both.
+If you haven’t already, you can start the development server using the following command:
 
-**First,** run `python3 main.py server --watch`. You can now navigate to [http://localhost:4242](http://localhost:4242) in your browser to preview your site live.
-
-**Next,** run `python3 main.py watch` in the other tab to regenerate the site automatically as you make changes to anything under the `src/` folder, such as `src/pages`, `src/resume`, and `src/templates` in the following steps.
+```shell
+npm run develop
+```
 
 ### Step 3. Update Your Bio
 
 1. Open `src/resume/about.yaml`
-2. Edit the values to reflect your name, contact information, skills, and more.
+2. Edit the data to reflect your name, contact information, skills, and more.
 
-This document is for the data that is the same across all your resume and portfolio items.
+This document contains the data that is the same across all your resume and portfolio items.
 
 - Name
 - Tagline
@@ -298,6 +280,15 @@ include:
   - Target Role 3
 ```
 
+**Since v0.1.0:** To add a work experience to all *except* specific resumes, use the All keyword under include, and use an exclude list to remove it from only those roles:
+
+```
+exclude:
+  - Target Role
+  - Target Role 2
+  - Target Role 3
+```
+
 Titles and descriptions need a default title, to start. If you would like to change your title role for specific resumes, you can do so by listing the name of the target role followed by the name of your changed title.
 
 This is particularly helpful if you played many roles within a company, and want to highlight one role over another for a specific resume.
@@ -361,19 +352,25 @@ You can customize the order the pages show up in your navigation by changing the
 
 You can set `title`, `slug`, and `order` in the markdown metadata.
 
-### Step 7. Compile Your Website for Uploading
+### Step 7. Optional: Compile Your Site for Uploading Manually
 
-If you are running the server and watch commands, you will have been able to refresh your website to see how it changes while you adjust your data.
+Highlight now supports Github Page deployment automatically. This means you can store the entire project using Github and it will deploy to a gh-pages branch from which you can serve your shiny new resume site.
 
-Once you are satisfied with your site, use CTRL+C in the console to stop watching for changes in your site and close the server.
+If you wish to host else where you can use this command to generate the site under the `site/` folder:
 
-Run `python main.py build` to compile the site using Tailwind CSS at production size. Once compiled, upload the contents of `site/` to your host of choice! I recommend free GitHub Pages.
+```shell
+npm run build
+```
+
+The contents of the `site/` folder can then be uploaded wherever you would like to host the website.
 
 ### Step 8: Print to PDF Using Chrome
 
-If you need PDF versions of your resume, as I do, there are special print CSS styles. Navigate to your desired resume page and _Print to PDF_. I recommend using Chrome if you experience any formatting issues.
+Highlight comes with custom print styles to ensure your resume can easily be saved as a PDF using the "Print to PDF" feature.
 
-You can adjust the font families in `styles.css` if you are not happy with the defaults.
+Simply navigate to your desired resume page on the website and _Print to PDF_. I recommend using Chrome if you experience any formatting issues. Note, in Firefox you will have to manually disable the header and footer text output as this cannot be overridden in the CSS automatically.
+
+Learn more about [customizing fonts and other theme styles](https://github.com/annedorko/highlight/wiki/Customizing-the-Theme) in the wiki.
 
 ## Roadmap
 
@@ -396,7 +393,7 @@ This project was to get my own flexible resume and portfolio running as well as 
 ### Packages
 - [Python-Markdown](https://github.com/Python-Markdown/markdown)
 - [PyYAML](https://pyyaml.org/wiki/PyYAMLDocumentation)
-- [Jinja2](https://jinja.palletsprojects.com/en/2.11.x/)
+- [Jinja](https://palletsprojects.com/p/jinja/)
 - [watchdog](https://pypi.org/project/watchdog/)
 - [unicode_slugify](https://pypi.org/project/unicode-slugify/)
 
@@ -404,3 +401,16 @@ This project was to get my own flexible resume and portfolio running as well as 
 - [othneildrew’s Best README Template](https://github.com/othneildrew/Best-README-Template)
 - [nqcm’s Static Site Generator Tutorial](https://github.com/nqcm/static-site-generator)
 - [Ansible YAML Syntax Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+
+### Contributors 
+
+<div style="display: flex; gap: 1.5em; text-align: center;">
+
+[<img src="https://github.com/annedorko.png" width="60px;" style="border-radius:100%;" /><br /><sub><a href="https://github.com/annedorko">@annedorko</a></sub>](https://github.com/annedorko/)
+
+[<img src="https://github.com/Stedders.png" width="60px;" style="border-radius:100%;" /><br /><sub><a href="https://github.com/Stedders">@Stedders</a></sub>](https://github.com/Stedders/)
+
+</div>
+
+
+
