@@ -1,5 +1,5 @@
 /* ./src/tailwind.css */
-@import './fonts.css';
+@import "./fonts.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,4 +19,32 @@ h6 {
 }
 .btn {
     @apply px-4 py-2 bg-blue-600 text-white rounded;
+}
+.prose {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold mb-5;
+    }
+    h1 {
+        @apply text-4xl;
+    }
+    h2 {
+        @apply text-3xl;
+    }
+    h3 {
+        @apply text-2xl;
+    }
+    h4 {
+        @apply text-xl;
+    }
+    > * {
+        @apply max-w-xl mx-auto;
+    }
+    p {
+        @apply text-lg mb-3;
+    }
 }

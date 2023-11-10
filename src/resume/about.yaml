@@ -1,75 +1,75 @@
 ---
-  name: Anne Dorko
-  taglines:
-    default: I blend data and art to make things that make a difference.
-  open:
+name: Your Name
+taglines:
+    default: An epic tagline that highlights what you do on the whole.
+open:
     available: true
     seeking: Freelance & Contract
     location: Remote
-  skills:
+skills:
     Musical Artist:
-      - skill: Violin, guitar, keyboard
-        years: 15
-      - skill: Chorus and theater
-        years: 10
-      - skill: Songwriting
-        years: 7
-      - skill: Music production
-        years: 2
+        - skill: Violin, guitar, keyboard
+          years: 15
+        - skill: Chorus and theater
+          years: 10
+        - skill: Songwriting
+          years: 7
+        - skill: Music production
+          years: 2
     Web & Marketing:
-      - skill: Web design
-        years: 15
-      - skill: Web development
-        years: 13
-      - skill: SEO and traffic analytics
-        years: 13
-      - skill: Ads management
-        years: 12
-      - skill: Content marketing
-        years: 12
+        - skill: Web design
+          years: 15
+        - skill: Web development
+          years: 13
+        - skill: SEO and traffic analytics
+          years: 13
+        - skill: Ads management
+          years: 12
+        - skill: Content marketing
+          years: 12
     Multimedia:
-      - skill: Graphic design
-        years: 15
-      - skill: Photography
-        years: 16
-      - skill: Film editing
-        years: 15
-      - skill: Podcast production
-        years: 3
-      - skill: Live streaming
-        years: 3
+        - skill: Graphic design
+          years: 15
+        - skill: Photography
+          years: 16
+        - skill: Film editing
+          years: 15
+        - skill: Podcast production
+          years: 3
+        - skill: Live streaming
+          years: 3
     Teaching:
-      - skill: Curriculum development
-        years: 2
-      - skill: College instructor
-        years: 1
-      - skill: Online course design
-        years: 2
-  links:
+        - skill: Curriculum development
+          years: 2
+        - skill: College instructor
+          years: 1
+        - skill: Online course design
+          years: 2
+links:
     Homepage:
-      url: https://www.annedorko.com
-      text: annedorko.com
+        url: https://www.dorko.dev
+        text: dorko.dev
     LinkedIn:
-      url: https://www.linkedin.com/in/annedorko
-      text: 'LinkedIn'
-      icon: '<i class="fab fa-linkedin"></i>'
-  contact:
+        url: https://www.linkedin.com/in/annedorko
+        text: "LinkedIn"
+        icon: '<i class="fab fa-linkedin"></i>'
+contact:
     email: anne@dorko.tv
-    phone: +1 512 774 4332
+    phone: +1 555 321 5432
     timezone: CET/CEST
-  education:
+education:
     MBA:
-      school: University of the People
-      degree: Masters
-      study: Business Administration
-      graduation: 2022
+        school: University of the People
+        degree: Masters
+        study: Business Administration
+        graduation: 2022
     B.S. Media Arts:
-      school: Platt College San Diego
-      degree: Bachelor of Science
-      study: Media Arts
-      graduation: 2008
+        school: Platt College San Diego
+        degree: Bachelor of Science
+        study: Media Arts
+        graduation: 2008
     A.A. Graphic Design:
-      school: Platt College San Diego
-      degree: Associates
-      study: Graphic Design
-      graduation: 2007
+        school: Platt College San Diego
+        degree: Associates
+        study: Graphic Design
+        graduation: 2007

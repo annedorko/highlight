@@ -3,12 +3,12 @@ order: 0
 
 # What I Do!
 
-I help people with big visions find the right steps to make them happen through research, planning, automation, and optimization.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est nulla, porttitor sed tellus eget, rhoncus porta quam. Quisque erat diam, venenatis nec tortor eu, fringilla rutrum magna. Integer lorem lorem, finibus a neque quis, dignissim varius elit. Vivamus nec feugiat leo. Donec mattis semper risus in ultricies. Fusce quis sem imperdiet, sodales ipsum sed, dignissim sem. Sed facilisis libero nec felis egestas consectetur. 
 
-Business is more than a means to an end: I’m passionate about creative expression, ethics, and making the world a better place. I am a lifelong student of both humanities and technology. Without perspective and context, the rest is meaningless. Let’s build your legacy with purpose!
+Vestibulum et nisi suscipit, iaculis nunc vitae, ullamcorper dui. Aenean non posuere nisl. Ut lacinia maximus iaculis. Mauris sollicitudin velit ac nulla suscipit tincidunt. 
 
 ## About Me
 
-By day, I am a contractor.
+Nullam pellentesque tincidunt ipsum, at commodo arcu sollicitudin ac. 
 
-By night, I am an avid reader, mindfulness practitioner, songwriter, music producer, online community leader, musician, volunteer customer support, volunteer widget maker, AeroPress coffee drinker, designer, writer, web developer, productivity geek, content creator, Bullet Journal fanatic, and mental health advocate.
+Etiam varius orci vel sapien fermentum lacinia. Etiam vitae lorem vel nibh dictum suscipit. Curabitur auctor vitae massa ultrices interdum. Maecenas at viverra metus, quis pulvinar lacus. Donec tortor ligula, tristique ut risus rutrum, laoreet tempus ante. Pellentesque porttitor nibh sed placerat sagittis. Nam urna sapien, aliquet sed ipsum at, porta vulputate libero. Nam elementum, diam vel lobortis blandit, felis tortor porta lectus, sed pharetra ligula enim nec nunc. Sed ut felis sed augue posuere ullamcorper. Vestibulum sodales mauris eu pellentesque aliquet. Integer feugiat, dui ac dignissim luctus, nisi ante mattis metus, in congue diam leo vel tortor. 
