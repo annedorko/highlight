@@ -29,6 +29,7 @@ class GenerateSite():
             self.destroy()
             self.write_base_files()
         # Generate new site files.
+        self.data['site'] = get_global()
         self.generate_homepage()
         self.generate_pages()
         self.generate_resume()
