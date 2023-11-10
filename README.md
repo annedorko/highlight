@@ -4,7 +4,7 @@
 
 ![Highlight Site Preview](https://user-images.githubusercontent.com/1281008/107776426-d93eb780-6d41-11eb-85b9-c3954b4fe843.png)
 
-[Demo](https://demo.highlight.dorko.dev/) | [Live Usage](https://hire.annedorko.com)
+[Landing Page](https://highlight.dorko.dev) | [Demo](https://demo.highlight.dorko.dev/) | [Live Usage](https://hire.annedorko.com)
 
 If you are using Highlight and wish to be featured, please [contact me](https://github.com/annedorko/highlight#contact).
 
