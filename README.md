@@ -125,7 +125,24 @@ This document contains the data that is the same across all your resume and port
 - Contact information
 - Education
 
-Your email will also be used to pull your Gravatar image, so I recommend ensuring you have an account there associated with your work email. Set up a professional photo that looks great on the homepage.
+
+By default, your email will also be used to pull your Gravatar image, so I recommend ensuring you have an account there associated with your work email. Set up a professional photo that looks great on the homepage.
+
+Alternatively, you can set `avatar` to `github` in the `src/config.yaml` file and ensure that your Github username is set under `contact` in the `src/resume/about.yaml` file.
+
+Something like this:
+
+```yaml
+avatar: github
+```
+
+```yaml
+contact:
+  email: you@example.com
+  phone: +1 555 321 5432
+  timezone: Pacific
+  github: yourusername
+```
 
 #### Skills
 

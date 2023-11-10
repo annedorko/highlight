@@ -167,6 +167,11 @@ def tailwind_os(status=''):
     postcss = 'npx postcss ./assets/css/styles.css -o ./site/assets/css/styles.css'
     return postcss
 
+def set_github_avatar(github, size):
+    github_url = 'https://github.com/'
+    github_url += github
+    github_url += '.png?size=' + str(size)
+    return github_url
 
 def set_gravatar(email, default, size):
     encoded_email = email.encode('utf-8')
