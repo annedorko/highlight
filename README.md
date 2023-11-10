@@ -4,7 +4,7 @@
 
 ![Highlight Site Preview](https://user-images.githubusercontent.com/1281008/107776426-d93eb780-6d41-11eb-85b9-c3954b4fe843.png)
 
-[Demo](https://highlight.dorko.dev/) | [Live Usage](https://hire.annedorko.com)
+[Demo](https://demo.highlight.dorko.dev/) | [Live Usage](https://hire.annedorko.com)
 
 If you are using Highlight and wish to be featured, please [contact me](https://github.com/annedorko/highlight#contact).
 
@@ -16,7 +16,7 @@ Highlight is built by and for generalists who often need tweaked versions of the
 
 Highlight is a Static Site Generator, which means the output can be hosted anywhere as plain HTML and CSS. By default it is configured to deploy to Github Pages automatically.
 
-This repo uses dummy data (which still features much of my own resume) and the results of the auto-deployment through Github Pages can be viewed here: [Highlight Demo Site](https://highlight.dorko.dev).
+This repo uses dummy data (which still features much of my own resume) and the results of the auto-deployment through Github Pages can be viewed here: [Highlight Demo Site](https://demo.highlight.dorko.dev).
 
 ## Built With
 
