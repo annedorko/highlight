@@ -31,7 +31,7 @@ If you use this project base, modify this project to suit your own resume and po
 
 Built using:
 
-- Python 3 (Required)
+- Python 3+
 - Node.js 21+
 - NPM 10+
 
