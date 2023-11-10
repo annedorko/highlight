@@ -9,7 +9,7 @@ class GenerateSite():
         self.data = {
             'compile': compile,
             'has_compiled': False,
-            'site': get_global(),
+            'site': get_global(compile=compile),
             'env': Environment(loader=FileSystemLoader('src/templates'))
         }
         print('Generating the site...')
@@ -21,6 +21,8 @@ class GenerateSite():
         print('Site regenerated.')
 
     def build(self, destroy=False, regenerate=False):
+        if regenerate:
+            self.data['compile'] == False
         # Build site directory if it does not exist.
         if not os.path.exists('site'):
             os.mkdir('site')
@@ -29,7 +31,7 @@ class GenerateSite():
             self.destroy()
             self.write_base_files()
         # Generate new site files.
-        self.data['site'] = get_global()
+        self.data['site'] = get_global(compile=self.data['compile'])
         self.generate_homepage()
         self.generate_pages()
         self.generate_resume()

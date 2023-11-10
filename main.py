@@ -24,11 +24,13 @@ from app.server import HighlightServer
 from app.watch import signal_handler
 from app.helpers import watch_paths
 
-site = GenerateSite(compile=True)
-
 if 'build' in sys.argv:
+    # Generate site for public use.
+    site = GenerateSite(compile=True)
     exit()
 
+# Generate site for local use.
+site = GenerateSite(compile=False)
 print('Initial site built')
 
 # Watchdog event handler
