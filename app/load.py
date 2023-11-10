@@ -35,7 +35,7 @@ def get_global(compile=False):
             links[fresh_link['url']] = fresh_link
         about['links'] = links
     # Get global site settings
-    with open('config.yaml', 'r') as config:
+    with open('src/config.yaml', 'r') as config:
         settings = load(config, Loader=Loader)
     settings['cname'] = settings['url']
     if compile == False:
