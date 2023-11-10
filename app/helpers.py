@@ -38,10 +38,15 @@ def load_history(role):
             # Optionally allow job: definition
             if experience.get('job'):
                 experience = experience.get('job')
+            # Is this listed as included?
             includes = experience.get('include')
             look_for = ['All', role]
-            if any(search in includes for search in look_for):
+            if includes and any(search in includes for search in look_for):
                 include = True
+            # Is this role explicitly excluded for this experience?
+            excludes = experience.get('exclude')
+            if excludes and any(search in excludes for search in [role]):
+                include = False
         # If including, carry on
         if include is True:
             # Process YAML data to pass onto page
