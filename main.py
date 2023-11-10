@@ -1,5 +1,5 @@
 '''
-Highlight v 0.1.0
+Highlight v 0.1.1
 
 Featuring a completely reworked server engine.
 

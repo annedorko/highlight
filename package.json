@@ -1,5 +1,8 @@
 {
     "scripts": {
+        "install-pip": "pip install -r requirements.txt",
+        "install-pipenv": "pipenv install",
+        "install-conda": "conda install --file requirements.txt",
         "build": "python3 main.py build",
         "develop": "python3 main.py server --watch",
         "server": "python3 main.py server"
