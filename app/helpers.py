@@ -110,7 +110,7 @@ def load_history(role):
     sort_past = sorted(
         PAST.items(), key=lambda x: x[1]['sort'], reverse=True)
     sort_current = sorted(
-        CURRENT.items(), key=lambda x: x[1]['sort'])
+        CURRENT.items(), key=lambda x: x[1]['sort'], reverse=True)
     for i, h in sort_current:
         WORK[i] = h
     for i, h in sort_past:
