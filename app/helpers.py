@@ -185,74 +185,25 @@ def set_gravatar(email, default, size):
         })
     return gravatar_url
 
-def date_diff(then, now):
-    # Measure length of time spent at a job or on a project in years, months
-    # NOTE: The following methods look a little convoluted, as uneven months, leap years, etc. made long-term contract terms clearly incorrect
-
-    # Set up standard datetime diff to work with
-    standard_diff = now - then
-    # Do math using years (i.e. 2020, 2019) if there is more than 365 days difference on the standard diff
-    years = now.year - then.year if standard_diff.days > 365 else 0
-    # If more than 1 year of time and the months aren't the same (i.e. Mar-Mar, Apr-Apr), crunch the difference in months
-    if years > 0 and then.month != now.month:
-        # Calculate months per year on the job, starting at 0
-        months = 0
-        # Add 1 to range end since range is exclusive of the final value
-        for i in range(then.year, now.year + 1):
-            if i == then.year:
-                # How many months of experience in the first year? December = 1 (i.e. 13-12=1), January = 12 (i.e. 13-1=12)
-                months += 13 - then.month
-                # print('months for', i, ':', (13 - then.month))
-            elif i == now.year:
-                # The number month works plainly
-                months += now.month
-            else:
-                # Each non starting and non ending year gets accounted for 12 months
-                months += 12
-        year_in_months = years * 12
-        # If we have fewer months than the number of months in the total years worked, we need to subtract a year and try again (this accounts for dates where the start/end months don't allow for full year calculations between years i.e. Starting in Dec 2018 and ending in Jan 2021 is not 3 years of experience since only one month is worked in both 2018 and 2021. The result is 2 years (2019, 2020) plus the two months)
-        if months < year_in_months:
-            years -= 1
-            year_in_months = years * 12
-        months = months - (years * 12)
-    elif then.month == now.month:
-        # Months match so the difference in months is zero
-        months = 0
-    else:
-        # If less than one year, it is accurate enough to divide by 30
-        # Always round up to match LinkedIn
-        month_diff = math.ceil(standard_diff.days / 30)
-        months = month_diff if month_diff < 12 else 11
-    str = ""
-    tStr = ""
-    if years > 1:
-        # Check years
-        if years == 1:
-            tStr = "yr"
-        else:
-            tStr = "yrs"
-        str = str + "%s %s" % (math.floor(years), tStr)
-        if months > 1:
-            # print('MONTHS IS ', months)
-            if months == 1:
-                tStr = "mo"
-            else:
-                tStr = "mos"
-            str += " %s %s" % (months, tStr)
-        return str
-    elif months > 1:
-        if months == 1:
-            tStr = "mo"
-        else:
-            tStr = "mos"
-        str = str + "%s %s" % (round(months), tStr)
-        return str
-    elif days > 0:
-        if days == 1:
-            tStr = "day"
-        else:
-            tStr = "days"
-        str = str + "%s %s" % (days, tStr)
-        return str
-    else:
-        return None
+def date_diff(then, now, format='%Y-%m'):
+    # Ensure we are working with datetime values.
+    now = now if isinstance(now, datetime.datetime) else datetime.datetime.strptime(now, format)
+    then = then if isinstance(then, datetime.datetime) else datetime.datetime.strptime(then, format)
+    # Calculate the difference between the dates.
+    diff = now - then
+    # Extract years and remaining days.
+    years = diff.days // 365
+    remaining_days = diff.days % 365
+    # Convert remaining days to months.
+    months = math.ceil(remaining_days / 30) if remaining_days > 14 else remaining_days // 30
+    # Avoid accidentally rounding up to 12 months or more.
+    if months > 11:
+        years += 1
+        months -= 12
+    # Convert date dato to human readable string.
+    date_info = []
+    if years > 0:
+        date_info.append(f"{years} {'yr' if years == 1 else 'yrs'}")
+    if months > 0:
+        date_info.append(f"{months} {'mo' if months == 1 else 'mos'}")
+    return " ".join(date_info)
