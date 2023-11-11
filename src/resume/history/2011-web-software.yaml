@@ -4,13 +4,13 @@ include:
 titles:
     default: Software Engineer
     Graphic Designer: Web Template Designer
-company: WebAssist
-location: San Diego, California, USA
-url: https://www.webassist.com/
+company: Web Software, Inc.
+location: City, State, USA
+url: https://www.example.com/
 type: Full-time
 dates:
     start: 2011-02
-    end: 2011-11
+    end: 2012-11
 skills:
     base:
         - PHP

@@ -5,9 +5,9 @@ exclude:
     - Graphic Designer
 titles:
     default: WordPress Tutorial Writer
-company: WordCandy
+company: Writing Agency
 location: Remote
-url: https://wordcandy.co/
+url: https://www.example.com
 type: Freelance
 dates:
     start: 2015-11
@@ -19,4 +19,4 @@ skills:
         - SEO
 descriptions:
     default: Ghost-writer for technical articles focusing on teaching nontechnical readers how to work with WordPress.
-    Business Analyst: Researched keyword opportunities for content marketing material. Wrote keyword optimized articles and tutorials on technical topics for non-technical consumers. Sourced and optimized media to improve reader experience.
+    Online Marketer: Researched keyword opportunities for content marketing material. Wrote keyword optimized articles and tutorials on technical topics for non-technical consumers. Sourced and optimized media to improve reader experience.

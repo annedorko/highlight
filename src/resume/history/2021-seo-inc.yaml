@@ -7,13 +7,13 @@ titles:
     default: Head of Education
     Front End Developer: Front End Developer
     WordPress Developer: WordPress Developer
-company: WooRank
+company: SEO, Inc.
 location: Remote
-url: https://www.woorank.com/
+url: https://www.example.com/
 type: Freelance
 dates:
-    start: 2018-03
-    end: 2020-05
+    start: 2021-03
+    end: 2022-05
 skills:
     base:
         - SEO

@@ -1,0 +1,27 @@
+---
+include:
+    - All
+exclude:
+    - Online Marketer
+titles:
+    default: Creator
+company: Entertainment Co.
+location: Remote
+url: https://www.example.com
+type: Project
+dates:
+    start: 2018-04
+    end: Present
+skills:
+    base:
+        - Leadership
+        - Community Management
+    default:
+        - Music Production
+    Front End Developer:
+        - Node.js
+        - Discord.js
+descriptions:
+    default: Entertainment platform for mental health advocacy through music, research-led conversation, and uplifting community spaces. Weekly live content planning and delivery. Creating and maintaining a custom self-hosted crowdfunding platform, including custom analytics solutions.
+    Front End Developer: Developing custom Patreon-alternatives, custom Discord bots, and other scripts to facilitate community management.
+    WordPress Developer: Developing custom Patreon-alternatives using WordPress, Divi, and Stripe, as well as custom Discord bots and other scripts to facilitate community management.

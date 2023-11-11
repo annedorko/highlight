@@ -1,34 +1,40 @@
 ---
 - role: Front End Developer
-  summary: Creative, self-motivated front-end developer with over 10 years experience building websites and web apps. Proficient in WordPress, Shopify, HTML, CSS, JavaScript, Node.js, React, PHP, Ruby, Python, Linux servers, and databases. Passionate about designing innovative solutions.
+  summary: Results-driven front-end developer with over a decade's experience crafting dynamic websites and applications. Proficient in WordPress, Shopify, HTML, CSS, JavaScript, Node.js, React, PHP, Ruby, Python. Skilled in Linux servers and databases, dedicated to innovation.
   skills:
       - HTML, CSS, JavaScript
-      - Custom WordPress
-      - Divi, Elementor
-      - Git, Github, Bitbucket
-      - Code Linting
+      - WordPress Customization
+      - E-Commerce
+      - Version Control
+      - Code Quality
       - CSS Frameworks
-      - Shopify
-      - Database Management
-      - Node.js, React, Next.js
+      - Python
+      - PHP
+      - Ruby
 - role: WordPress Developer
-  summary: Creative, self-motivated WordPress developer with over 10 years experience building websites and web apps. Proficient in WordPress, WooCommerce, Shopify, custom plugin development, custom API integrations, HTML, CSS, JavaScript, PHP, and databases. Passionate about designing innovative solutions.
+  summary: Seasoned WordPress developer with ten years crafting websites and apps. Proficient in WordPress, WooCommerce, Shopify, excelling in custom plugin development, API integrations, HTML, CSS, JavaScript, PHP, and databases. Committed to inventive solutions.
   skills:
-      - WordPress
-      - Theme Development
+      - Theme Customization
       - Plugin Development
-      - WooCommerce
+      - E-Commerce
+      - Custom API I/O
       - HTML, CSS, JS
-      - MySQL
+      - Database Management
 - role: Graphic Designer
-  summary: Graphic design is my passion.
+  summary: Innovative graphic designer driven by passion and creativity in every design. Proficient in Adobe Creative Suite, Affinity Suite, brand identity creation, digital artistry, vector graphics, and web-optimized design.
   skills:
       - Adobe Creative Suite
       - Affinity Suite
-      - Branding
+      - Brand Identity
       - Digital Painting
-      - Vectorization
-      - Web Optimized Graphics
-      - Print Graphics
-      - Typography
-      - Web Design
+      - Vector Graphics
+      - Web-Optimized Design
+- role: Online Marketer
+  summary: Driven online marketer leveraging creative design and analytical skills to develop campaigns. Proficient in Google Ads, Facebook Ads, ad copywriting, visual graphics creation, targeted audience segmentation, re-targeting, and Google Analytics.
+  skills:
+      - Google & Facebook Ads
+      - Ad Copywriting
+      - Visual Graphics Creation
+      - Audience Segmentation
+      - Re-Targeting Strategies
+      - Google Analytics

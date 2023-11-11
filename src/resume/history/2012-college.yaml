@@ -5,9 +5,9 @@ exclude:
     - Graphic Designer
 titles:
     default: PHP & JavaScript Instructor
-company: Platt College San Diego
-location: San Diego, California, USA
-url: https://platt.edu/
+company: College
+location: City, State, USA
+url: https://www.example.com
 type: Full-time
 dates:
     start: 2012-11
@@ -20,4 +20,3 @@ skills:
         - Photoshop
 descriptions:
     default: Designed educational materials and taught art students to make the leap from graphic design to programming with PHP and JavaScript.
-    Business Analyst: Identified knowledge gaps for art students to learn technical code skills. Adjusted and created curriculums to address these knowledge gaps. Conducted in-person courses.

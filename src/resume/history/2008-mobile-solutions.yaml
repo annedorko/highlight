@@ -4,9 +4,9 @@ include:
 titles:
     default: Web Developer
     Graphic Designer: In-House Graphic Designer
-company: Tapioca Mobile, Inc.
-location: San Diego, California, USA
-url: https://www.crunchbase.com/organization/tapioca-mobile
+company: Mobile Solutions, Inc.
+location: City, State, USA
+url: https://www.example.com
 type: Full-time
 dates:
     start: 2008-01
@@ -17,17 +17,13 @@ skills:
         - HTML
         - CSS
         - JavaScript
-        - Agile Methodoogies
+        - Agile Methodologies
     default:
         - Ruby on Rails
         - Quality Assurance
         - Website Optimization
     Online Marketer:
         - Keyword Research
-    Business Analyst:
-        - Keyword Opportunities
-        - Establish Design Goals
-        - Team Communications
 descriptions:
     default: Created and improved UX and UI in an Agile work environment. Front-end development with Ruby on Rails. Designed and managed our front-facing business website. Communicated with engineers and business development teams to establish design goals. Tested bugs for Quality Assurance. Identified keyword opportunities and website optimization.
     WordPress Developer: Created and improved UX and UI in an Agile work environment. Managed front-end design and development. Communicated with engineers and business development teams to establish design goals. Tested bugs for Quality Assurance. Identified keyword opportunities and website optimization.

@@ -4,9 +4,9 @@ include:
 titles:
     default: Web Coordinator
     Graphic Designer: UX/UI Designer
-company: Healthy Dining
-location: San Diego, California, USA
-url: https://www.mymenuusa.com/
+company: Health Magazine
+location: City, State, USA
+url: https://www.example.com/
 type: Full-time
 dates:
     start: 2010-10

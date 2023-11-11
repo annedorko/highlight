@@ -8,7 +8,7 @@ titles:
     Graphic Designer: Web and Graphic Design
 company: Self
 location: Remote
-url: https://www.annedorko.com
+url: https://www.example.com
 type: Freelance
 dates:
     start: 2006-01
@@ -17,10 +17,14 @@ skills:
     base:
         - PHP
         - MySQL
+        - Node.js
     default:
         - WordPress
+        - DaVinci Resolve
+        - Next.js
+        - Gatsby.js
+    Graphic Designer:
+        - Adobe Creative Suite
+        - Affinity Designer
 descriptions:
     default: Managing remote clients globally. Work including ad-hoc services, graphic, design, branding, WordPress plugin and theme development, general web development, data analysis, educational platform design, online marketing services, support, and consulting.
-    Business Analyst: Helping businesses and individuals find and acquire necessary tools and assets. Identifying client needs through a discovery phase. Providing services such as digital strategy, web development, web design, automation and optimization, branding, communications, marketing assets, data analysis, and music production.
-    Content Producer: Managing remote clients. Work including ad-hoc services, web hosting maintainence, graphic, design, web development, software development, data analysis, educational platform design, online marketing services, support, and consulting.
-    Content Writer: Managing remote clients. Work including ad-hoc services, content planning, writing, consulting, online marketing services, and guest blogging.

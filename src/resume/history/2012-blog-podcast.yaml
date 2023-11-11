@@ -1,9 +1,12 @@
 ---
 include:
-    - None
+    - Graphic Designer
+    - Online Marketer
 titles:
     default: Founder
-company: Without Boxes
+    Graphic Designer: Web Designer
+    Online Marketer: Copywriter
+company: Collaborative Podcast
 location: Remote
 url: https://www.withoutboxes.com/
 type: Project

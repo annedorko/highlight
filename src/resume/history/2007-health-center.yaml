@@ -5,12 +5,12 @@ titles:
     default: Search Engine Marketer
     Front End Developer: Web Manager
     Graphic Designer: In-House Graphic Designer
-company: Casa Palmera
-location: Del Mar, California, USA
-url: https://casapalmera.com/
+company: Health Center Inc.
+location: City, State, USA
+url: https://www.example.com/
 type: Full-time
 dates:
-    start: 2007-04
+    start: 2006-04
     end: 2008-01
 skills:
     base:
@@ -22,8 +22,8 @@ skills:
         - Google Ads Manager
         - Adobe InDesign
         - Adobe Photoshop
+    Graphic Design:
+        - Copy Writing
         - Graphic Design
-    Writer:
-        - Content Writing
 descriptions:
     default: Identified keyword opportunities, created keyword-focused content to generate business inquiries, maintained and optimized the website, designed magazine ads and internal marketing visuals.
