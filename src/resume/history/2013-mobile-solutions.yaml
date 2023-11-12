@@ -9,8 +9,8 @@ location: City, State, USA
 url: https://www.example.com
 type: Full-time
 dates:
-    start: 2008-01
-    end: 2010-04
+    start: 2013-01
+    end: 2015-04
 skills:
     base:
         - Ruby

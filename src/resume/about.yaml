@@ -9,28 +9,28 @@ open:
 skills:
     Web & Marketing:
         - skill: Web design
-          years: 15
+          years: 10
         - skill: Web development
-          years: 13
+          years: 10
         - skill: SEO and traffic analytics
-          years: 13
+          years: 8
         - skill: Ads management
-          years: 12
+          years: 5
         - skill: Content marketing
-          years: 12
+          years: 5
     Multimedia:
         - skill: Graphic design
-          years: 15
+          years: 10
         - skill: Photography
-          years: 16
+          years: 12
         - skill: Film editing
-          years: 15
+          years: 8
         - skill: Podcast production
           years: 3
 links:
     Homepage:
-        url: https://www.example.com
-        text: example.com
+        url: https://highlight.dorko.dev
+        text: highlight.dorko.dev
     LinkedIn:
         url: https://www.linkedin.com/in/annedorko
         text: "LinkedIn"

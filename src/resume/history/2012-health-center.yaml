@@ -10,8 +10,8 @@ location: City, State, USA
 url: https://www.example.com/
 type: Full-time
 dates:
-    start: 2006-04
-    end: 2008-01
+    start: 2012-04
+    end: 2013-01
 skills:
     base:
         - Content Marketing
